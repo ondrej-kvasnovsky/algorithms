@@ -1,3 +1,10 @@
-# Table of content
+# Summary
 
-* [First Chapter](chapter1.md)
+* [Introduction](README.md)
+* [Data Types](chapter1.md)
+* Sorting
+* Searching
+* Graphs
+* Strings
+* Advanced
+
