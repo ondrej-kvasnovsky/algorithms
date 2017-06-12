@@ -26,7 +26,7 @@ Given set of N objects we support two operations:
 
 ### Quick-Find - eager approach
 
-The elements are connected if the have the same number in an array. 
+The elements are connected if the have the same number in an array.
 
 ![](/assets/Screen Shot 2017-06-11 at 9.51.16 PM.png)
 
@@ -36,13 +36,99 @@ In order to union \(connect the points\) we need to change all from id\[p\] to i
 
 ![](/assets/Screen Shot 2017-06-11 at 9.52.06 PM.png)
 
-### 
+### Java implementation
 
+```
+import java.util.Arrays;
 
+class UF {
+    private int[] id;
 
+    public UF(int n) {
+        id = new int[n];
+        for (int i = 0; i < n; i++) {
+            id[i] = i;
+        }
+    }
+    
+    @Override
+    public String toString() {
+        return Arrays.toString(id);
+    }
 
+    public void union(int p, int q) {
+        int changeTo = id[p];
+        id[p] = id[q];
+        for (int i = 0; i < id.length; i++) {
+            if (id[i] == changeTo) {
+                id[i] = id[p];
+            }
+        }
+    }
 
+    public boolean connected(int p, int q) {
+        return id[p] == id[q];
+    }
+}
 
+public class UnionFind {
+
+    public static void main(String[] args) {
+        UF uf = new UF(10);
+        System.out.println(uf);
+
+        uf.union(4, 3);
+        System.out.println(uf);
+
+        uf.union(3, 8);
+        System.out.println(uf);
+
+        uf.union(6, 5);
+        System.out.println(uf);
+
+        uf.union(9, 4);
+        System.out.println(uf);
+
+        uf.union(2, 1);
+        System.out.println(uf);
+
+        uf.union(8, 9);
+        System.out.println(uf);
+
+        boolean connected89 = uf.connected(8, 9);
+        System.out.println(connected89);
+
+        boolean connected50_1 = uf.connected(5, 0);
+        System.out.println(connected50_1);
+
+        uf.union(5, 0);
+        System.out.println(uf);
+
+        boolean connected50_2 = uf.connected(5, 0);
+        System.out.println(connected50_2);
+
+        boolean connected49 = uf.connected(4, 9);
+        System.out.println(connected49);
+    }
+}
+```
+
+It prints out:
+
+```
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[0, 1, 2, 3, 3, 5, 6, 7, 8, 9]
+[0, 1, 2, 8, 8, 5, 6, 7, 8, 9]
+[0, 1, 2, 8, 8, 5, 5, 7, 8, 9]
+[0, 1, 2, 8, 8, 5, 5, 7, 8, 8]
+[0, 1, 1, 8, 8, 5, 5, 7, 8, 8]
+[0, 1, 1, 8, 8, 5, 5, 7, 8, 8]
+true
+false
+[0, 1, 1, 8, 8, 0, 0, 7, 8, 8]
+true
+true
+```
 
 
 
