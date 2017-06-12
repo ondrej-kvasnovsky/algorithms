@@ -50,17 +50,17 @@ class UF {
             id[i] = i;
         }
     }
-    
+
     @Override
     public String toString() {
         return Arrays.toString(id);
     }
 
     public void union(int p, int q) {
-        int changeTo = id[p];
+        int pId = id[p];
         id[p] = id[q];
         for (int i = 0; i < id.length; i++) {
-            if (id[i] == changeTo) {
+            if (id[i] == pId) {
                 id[i] = id[p];
             }
         }
