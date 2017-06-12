@@ -38,6 +38,8 @@ In order to union \(connect the points\) we need to change all from id\[p\] to i
 
 ### Java implementation
 
+Cost model: initialize O\(n\), union O\(n\), find O\(1\).
+
 ```
 import java.util.Arrays;
 
