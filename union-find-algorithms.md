@@ -552,3 +552,11 @@ true
 
 Insert O\(n\), union\(log2\*n\) - iterative logarithm, find O\(log2n\). Simply said, what would take 30 years to compute, it can be done in 6 seconds when using Weighted-Path-Compressed Quick-Union.
 
+### Percolation
+
+Percolates if there is a way from to to bottom. This model is used in electricity, fluid flow, social interactions and so on.  ![](/assets/Screen Shot 2017-06-12 at 10.37.33 PM.png)Here is how we represent the model. ![](/assets/Screen Shot 2017-06-12 at 10.45.11 PM.png)
+
+
+
+
+
