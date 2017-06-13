@@ -134,7 +134,7 @@ true
 
 ### Quick-union - lazy approach
 
-We create tree structure. Before we connect two dots, we need to find root of the dot we want to connect to.![](/assets/Screen Shot 2017-06-11 at 10.54.45 PM.png)Here is an example of a tree with its array.![](/assets/Screen Shot 2017-06-11 at 11.06.36 PM.png)Java implementation: 
+We create tree structure. Before we connect two dots, we need to find root of the dot we want to connect to.![](/assets/Screen Shot 2017-06-11 at 10.54.45 PM.png)Here is an example of a tree with its array.![](/assets/Screen Shot 2017-06-11 at 11.06.36 PM.png)Java implementation:
 
 ```
 import java.util.Arrays;
@@ -219,17 +219,154 @@ Quick-union is also slow. Intialize O\(n\), union O\(n\) - but N depends on dept
 
 ### Quick-union improvements
 
-Weighting: link root of smaller tree to root of larger tree.![](/assets/Screen Shot 2017-06-12 at 5.44.55 PM.png)Here is the result of weighting in bigger scope.![](/assets/Screen Shot 2017-06-12 at 5.49.10 PM.png)Java implementation: 
+Weighting: link root of smaller tree to root of larger tree.![](/assets/Screen Shot 2017-06-12 at 5.44.55 PM.png)Here is the result of weighting in bigger scope.![](/assets/Screen Shot 2017-06-12 at 5.49.10 PM.png)Java implementation:
 
 ```
+import java.util.Arrays;
 
+class WQU {
+
+    private int[] indicies; // just to keep visual track of values in arrays
+    private int[] ids;
+    private int[] weights;
+
+    public WQU(int n) {
+        indicies = new int[n];
+        ids = new int[n];
+        weights = new int[n];
+        for (int i = 0; i < n; i++) {
+            indicies[i] = i;
+            ids[i] = i;
+            weights[i] = 1;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return Arrays.toString(indicies) + "\n" +
+                Arrays.toString(weights) + "\n" +
+                Arrays.toString(ids) + "\n";
+    }
+
+    public int root(int i) {
+        while (i != ids[i]) {
+            i = ids[i];
+        }
+        return i;
+    }
+
+    public boolean connected(int p, int q) {
+        return root(p) == root(q);
+    }
+
+    public void union(int p, int q) {
+        System.out.println(p + ", " + q);
+        int i = ids[p];
+        int j = ids[q];
+        if (i == j) {
+            // this means they are the same
+            return;
+        }
+        if (weights[i] < weights[j]) {
+            ids[i] = j;
+            weights[j] += weights[i];
+        } else {
+            ids[j] = i;
+            weights[i] += weights[j];
+        }
+
+    }
+}
+
+public class WeightedQuickUnion {
+
+    public static void main(String[] args) {
+        WQU uf = new WQU(10);
+        System.out.println(uf);
+
+        uf.union(4, 3);
+        System.out.println(uf);
+
+        uf.union(3, 8);
+        System.out.println(uf);
+
+        uf.union(6, 5);
+        System.out.println(uf);
+
+        uf.union(9, 4);
+        System.out.println(uf);
+
+        uf.union(2, 1);
+        System.out.println(uf);
+
+        uf.union(8, 9);
+        System.out.println(uf);
+
+        boolean connected89 = uf.connected(8, 9);
+        System.out.println(connected89);
+
+        boolean connected50_1 = uf.connected(5, 0);
+        System.out.println(connected50_1);
+
+        uf.union(5, 0);
+        System.out.println(uf);
+
+        boolean connected50_2 = uf.connected(5, 0);
+        System.out.println(connected50_2);
+
+        boolean connected49 = uf.connected(4, 9);
+        System.out.println(connected49);
+    }
+}
 ```
 
+Here is the output, observe how values are linked in the array. 
 
+```
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
+4, 3
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[1, 1, 1, 1, 2, 1, 1, 1, 1, 1]
+[0, 1, 2, 4, 4, 5, 6, 7, 8, 9]
 
+3, 8
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[1, 1, 1, 1, 3, 1, 1, 1, 1, 1]
+[0, 1, 2, 4, 4, 5, 6, 7, 4, 9]
 
+6, 5
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[1, 1, 1, 1, 3, 1, 2, 1, 1, 1]
+[0, 1, 2, 4, 4, 6, 6, 7, 4, 9]
 
+9, 4
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[1, 1, 1, 1, 4, 1, 2, 1, 1, 1]
+[0, 1, 2, 4, 4, 6, 6, 7, 4, 4]
 
+2, 1
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[1, 1, 2, 1, 4, 1, 2, 1, 1, 1]
+[0, 2, 2, 4, 4, 6, 6, 7, 4, 4]
 
+8, 9
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[1, 1, 2, 1, 4, 1, 2, 1, 1, 1]
+[0, 2, 2, 4, 4, 6, 6, 7, 4, 4]
+
+true
+false
+5, 0
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[1, 1, 2, 1, 4, 1, 3, 1, 1, 1]
+[6, 2, 2, 4, 4, 6, 6, 7, 4, 4]
+
+true
+true
+```
+
+Initialize O\(n\), union O\(log2n\), connect O\(log2n\).
 
