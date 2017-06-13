@@ -374,13 +374,157 @@ Initialize O\(n\), union O\(log2n\), connect O\(log2n\).
 
 #### Improvement 2: Path Compression
 
+As we go up through the tree, we flatten the tree by putting the node below the root.![](/assets/Screen Shot 2017-06-12 at 10.20.26 PM.png)Java implementation \(only this line `ids[i] = ids[ids[i]];` has been added to `root` method\). 
 
+```
+package algorithms;
 
+import java.util.Arrays;
 
+class PathCompWQU {
 
+    private int[] indicies; // just to keep visual track of values in arrays
+    private int[] ids;
+    private int[] weights;
 
+    public PathCompWQU(int n) {
+        indicies = new int[n];
+        ids = new int[n];
+        weights = new int[n];
+        for (int i = 0; i < n; i++) {
+            indicies[i] = i;
+            ids[i] = i;
+            weights[i] = 1;
+        }
+    }
 
+    @Override
+    public String toString() {
+        return Arrays.toString(indicies) + "\n" +
+                Arrays.toString(weights) + "\n" +
+                Arrays.toString(ids) + "\n";
+    }
 
+    public int root(int i) {
+        while (i != ids[i]) {
+            ids[i] = ids[ids[i]];
+            i = ids[i];
+        }
+        return i;
+    }
+
+    public boolean connected(int p, int q) {
+        return root(p) == root(q);
+    }
+
+    public void union(int p, int q) {
+        System.out.println(p + ", " + q);
+        int i = ids[p];
+        int j = ids[q];
+        if (i == j) {
+            // this means they are the same
+            return;
+        }
+        if (weights[i] < weights[j]) {
+            ids[i] = j;
+            weights[j] += weights[i];
+        } else {
+            ids[j] = i;
+            weights[i] += weights[j];
+        }
+
+    }
+}
+
+public class PathCompressionQuickUnion {
+
+    public static void main(String[] args) {
+        PathCompWQU uf = new PathCompWQU(10);
+        System.out.println(uf);
+
+        uf.union(4, 3);
+        System.out.println(uf);
+
+        uf.union(3, 8);
+        System.out.println(uf);
+
+        uf.union(6, 5);
+        System.out.println(uf);
+
+        uf.union(9, 4);
+        System.out.println(uf);
+
+        uf.union(2, 1);
+        System.out.println(uf);
+
+        uf.union(8, 9);
+        System.out.println(uf);
+
+        boolean connected89 = uf.connected(8, 9);
+        System.out.println(connected89);
+
+        boolean connected50_1 = uf.connected(5, 0);
+        System.out.println(connected50_1);
+
+        uf.union(5, 0);
+        System.out.println(uf);
+
+        boolean connected50_2 = uf.connected(5, 0);
+        System.out.println(connected50_2);
+
+        boolean connected49 = uf.connected(4, 9);
+        System.out.println(connected49);
+    }
+}
+```
+
+Here is the output of that program.
+
+```
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+4, 3
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[1, 1, 1, 1, 2, 1, 1, 1, 1, 1]
+[0, 1, 2, 4, 4, 5, 6, 7, 8, 9]
+
+3, 8
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[1, 1, 1, 1, 3, 1, 1, 1, 1, 1]
+[0, 1, 2, 4, 4, 5, 6, 7, 4, 9]
+
+6, 5
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[1, 1, 1, 1, 3, 1, 2, 1, 1, 1]
+[0, 1, 2, 4, 4, 6, 6, 7, 4, 9]
+
+9, 4
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[1, 1, 1, 1, 4, 1, 2, 1, 1, 1]
+[0, 1, 2, 4, 4, 6, 6, 7, 4, 4]
+
+2, 1
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[1, 1, 2, 1, 4, 1, 2, 1, 1, 1]
+[0, 2, 2, 4, 4, 6, 6, 7, 4, 4]
+
+8, 9
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[1, 1, 2, 1, 4, 1, 2, 1, 1, 1]
+[0, 2, 2, 4, 4, 6, 6, 7, 4, 4]
+
+true
+false
+5, 0
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[1, 1, 2, 1, 4, 1, 3, 1, 1, 1]
+[6, 2, 2, 4, 4, 6, 6, 7, 4, 4]
+
+true
+true
+```
 
 
 
