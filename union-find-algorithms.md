@@ -219,7 +219,9 @@ Quick-union is also slow. Intialize O\(n\), union O\(n\) - but N depends on dept
 
 ### Quick-union improvements
 
-Weighting: link root of smaller tree to root of larger tree.![](/assets/Screen Shot 2017-06-12 at 5.44.55 PM.png)Here is the result of weighting in bigger scope.![](/assets/Screen Shot 2017-06-12 at 5.49.10 PM.png)Java implementation:
+#### Improvement 1: Weighting
+
+Link root of smaller tree to root of larger tree.![](/assets/Screen Shot 2017-06-12 at 5.44.55 PM.png)Here is the result of weighting in bigger scope.![](/assets/Screen Shot 2017-06-12 at 5.49.10 PM.png)Java implementation:
 
 ```
 import java.util.Arrays;
@@ -320,7 +322,7 @@ public class WeightedQuickUnion {
 }
 ```
 
-Here is the output, observe how values are linked in the array. 
+Here is the output, observe how values are linked in the array.
 
 ```
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -369,4 +371,16 @@ true
 ```
 
 Initialize O\(n\), union O\(log2n\), connect O\(log2n\).
+
+#### Improvement 2: Path Compression
+
+
+
+
+
+
+
+
+
+
 
