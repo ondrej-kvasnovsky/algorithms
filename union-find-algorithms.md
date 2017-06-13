@@ -38,7 +38,7 @@ In order to union \(connect the points\) we need to change all from id\[p\] to i
 
 ### Java implementation
 
-Cost model: initialize O\(n\), union O\(n\), find O\(1\).
+Cost model: initialize O\(n\), union O\(n\), find O\(1\). Takes n^2 array accesses to process sequence of N union commands on N objects. It is too slow and we can't accept that, quick-find is too slow.
 
 ```
 import java.util.Arrays;
@@ -131,6 +131,105 @@ false
 true
 true
 ```
+
+### Quick-union - lazy approach
+
+We create tree structure. Before we connect two dots, we need to find root of the dot we want to connect to.![](/assets/Screen Shot 2017-06-11 at 10.54.45 PM.png)Here is an example of a tree with its array.![](/assets/Screen Shot 2017-06-11 at 11.06.36 PM.png)Java implementation: 
+
+```
+import java.util.Arrays;
+
+class QU {
+    private int[] id;
+
+    public QU(int n) {
+        id = new int[n];
+        for (int i = 0; i < n; i++) {
+            id[i] = i;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return Arrays.toString(id);
+    }
+
+    public void union(int p, int q) {
+        System.out.println(p + ", " + q);
+        int i = root(p);
+        int j = root(q);
+        id[i] = j;
+    }
+
+    public boolean connected(int p, int q) {
+        return root(p) == root(q);
+    }
+
+    public int root(int index) {
+        while (index != id[index]) {
+            index = id[index];
+        }
+        return index;
+    }
+}
+
+public class QuickUnion {
+
+    public static void main(String[] args) {
+        QU uf = new QU(10);
+        System.out.println(uf);
+
+        uf.union(4, 3);
+        System.out.println(uf);
+
+        uf.union(3, 8);
+        System.out.println(uf);
+
+        uf.union(6, 5);
+        System.out.println(uf);
+
+        uf.union(9, 4);
+        System.out.println(uf);
+
+        uf.union(2, 1);
+        System.out.println(uf);
+
+        uf.union(8, 9);
+        System.out.println(uf);
+
+        boolean connected89 = uf.connected(8, 9);
+        System.out.println(connected89);
+
+        boolean connected50_1 = uf.connected(5, 0);
+        System.out.println(connected50_1);
+
+        uf.union(5, 0);
+        System.out.println(uf);
+
+        boolean connected50_2 = uf.connected(5, 0);
+        System.out.println(connected50_2);
+
+        boolean connected49 = uf.connected(4, 9);
+        System.out.println(connected49);
+    }
+}
+```
+
+Quick-union is also slow. Intialize O\(n\), union O\(n\) - but N depends on depth of tree, if tree is too deep, algorithm will perform slowly, find O\(n\).
+
+### Quick-union improvements
+
+Weighting: link root of smaller tree to root of larger tree.![](/assets/Screen Shot 2017-06-12 at 5.44.55 PM.png)Here is the result of weighting in bigger scope.![](/assets/Screen Shot 2017-06-12 at 5.49.10 PM.png)Java implementation: 
+
+```
+
+```
+
+
+
+
+
+
 
 
 
