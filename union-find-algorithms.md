@@ -215,6 +215,30 @@ public class QuickUnion {
 }
 ```
 
+Here is the output. 
+
+```
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+4, 3
+[0, 1, 2, 3, 3, 5, 6, 7, 8, 9]
+3, 8
+[0, 1, 2, 8, 3, 5, 6, 7, 8, 9]
+6, 5
+[0, 1, 2, 8, 3, 5, 5, 7, 8, 9]
+9, 4
+[0, 1, 2, 8, 3, 5, 5, 7, 8, 8]
+2, 1
+[0, 1, 1, 8, 3, 5, 5, 7, 8, 8]
+8, 9
+[0, 1, 1, 8, 3, 5, 5, 7, 8, 8]
+true
+false
+5, 0
+[0, 1, 1, 8, 3, 0, 5, 7, 8, 8]
+true
+true
+```
+
 Quick-union is also slow. Intialize O\(n\), union O\(n\) - but N depends on depth of tree, if tree is too deep, algorithm will perform slowly, find O\(n\).
 
 ### Quick-union improvements
@@ -374,7 +398,7 @@ Initialize O\(n\), union O\(log2n\), connect O\(log2n\).
 
 #### Improvement 2: Path Compression
 
-As we go up through the tree, we flatten the tree by putting the node below the root.![](/assets/Screen Shot 2017-06-12 at 10.20.26 PM.png)Java implementation \(only this line `ids[i] = ids[ids[i]];` has been added to `root` method\). 
+As we go up through the tree, we flatten the tree by putting the node below the root.![](/assets/Screen Shot 2017-06-12 at 10.20.26 PM.png)Java implementation \(only this line `ids[i] = ids[ids[i]];` has been added to `root` method\).
 
 ```
 package algorithms;
