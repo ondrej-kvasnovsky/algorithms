@@ -215,7 +215,7 @@ public class QuickUnion {
 }
 ```
 
-Here is the output. 
+Here is the output.
 
 ```
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -550,5 +550,5 @@ true
 true
 ```
 
-
+Insert O\(n\), union\(log2\*n\) - iterative logarithm, find O\(log2n\). Simply said, what would take 30 years to compute, it can be done in 6 seconds when using Weighted-Path-Compressed Quick-Union.
 
