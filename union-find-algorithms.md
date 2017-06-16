@@ -554,9 +554,5 @@ Insert O\(n\), union\(log2\*n\) - iterative logarithm, find O\(log2n\). Simply s
 
 ### Percolation
 
-Percolates if there is a way from to to bottom. This model is used in electricity, fluid flow, social interactions and so on.  ![](/assets/Screen Shot 2017-06-12 at 10.37.33 PM.png)Here is how we represent the model. ![](/assets/Screen Shot 2017-06-12 at 10.45.11 PM.png)
-
-
-
-
+Percolates if there is a way from to to bottom. This model is used in electricity, fluid flow, social interactions and so on.  ![](/assets/Screen Shot 2017-06-12 at 10.37.33 PM.png)Here is how we represent the model. ![](/assets/Screen Shot 2017-06-12 at 10.45.11 PM.png) More about the problem to solve is [here](http://coursera.cs.princeton.edu/algs4/assignments/percolation.html).
 
