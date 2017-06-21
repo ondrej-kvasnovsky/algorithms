@@ -175,7 +175,11 @@ public class SumInArray {
 }
 ```
 
-[Here](https://gist.github.com/st0le/5893435) is another implementation of the problem. 
+[Here](https://gist.github.com/st0le/5893435) is another implementation of the problem.
+
+### Memory
+
+Typical memory consumption. ![](/assets/Screen Shot 2017-06-20 at 9.59.55 PM.png)
 
 
 
