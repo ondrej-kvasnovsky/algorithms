@@ -1,5 +1,9 @@
 # Analysis of Algorithms
 
+> It is convenient to have a measure of the amount of work involved in a computing process, even though it be a verycrudeone. We may count up the number of times that various elementary operations are applied in the whole process and then given them various weights. We might, for instance, count the number of additions, subtractions, multiplications, divisions, recording of numbers, and extractions of figures from tables. In the case of computing with matrices most of the work consists of multiplications and writting down numbers, andwe shall therefore only attempt to count the number of multiplications and recordings.
+>
+> — Alan Turing
+
 Consider these questions to be solved:
 
 * Given N distinct integers, how many zeros is there?
@@ -127,6 +131,43 @@ public class BinarySearch {
 
         int notFound = bs.find(arr, 200);
         System.out.println(notFound);
+    }
+}
+```
+
+### 3SUM problem with Binary Search
+
+O\(n^2 n log\(n\)\)
+
+```
+class TripletsWithBinarySearch {
+
+    public int findZeroSums(int[] arr) {
+        Arrays.sort(arr); // quick sort -> O(n log(n))
+
+        int count = 0;
+        int length = arr.length;
+        for (int i = 0; i < length - 2; i++) { // O(n^2 n log(n))
+            for (int j = i + 1; j < length - 1; j++) {
+                int key = -arr[i] - arr[j];
+                int k = Arrays.binarySearch(arr, j + 1, length, key);
+                if (k > j) { // compare index of found with current position (j)
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+}
+
+public class SumInArray {
+
+    public static void main(String[] args) {
+        int[] arr = {0, 1, 2, -1, -2, 0, 5, 7};
+
+        // O(n^2 logn)
+        int tripletsBS = new TripletsWithBinarySearch().findZeroSums(arr);
+        System.out.println(tripletsBS);
     }
 }
 ```
