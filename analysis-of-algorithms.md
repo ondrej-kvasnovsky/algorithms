@@ -137,7 +137,7 @@ public class BinarySearch {
 
 ### 3SUM problem with Binary Search
 
-We use binary search for finding k index of a value that is opposite to what is at position i and j. So we calculate -arr\[i\] - arr\[j\] and then we search for this value in the array. That means -arr\[i\] - arr\[i\] + arr\[k\] is equal to 0. 
+We use binary search for finding k index of a value that is opposite to what is at position i and j. So we calculate -arr\[i\] - arr\[j\] and then we search for this value in the array. That means -arr\[i\] - arr\[i\] + arr\[k\] is equal to 0.
 
 O\(n^2 n log\(n\)\), definitelly better than O\(n^3\).
 
@@ -153,7 +153,8 @@ class TripletsWithBinarySearch {
             for (int j = i + 1; j < length - 1; j++) {
                 int key = -arr[i] - arr[j];
                 int k = Arrays.binarySearch(arr, j + 1, length, key);
-                if (k > j) { // compare index of found with current position (j)
+                if (k > j && arr[k] - key == 0) { // compare index of found with current position (j)
+                // this 'arr[k] - key == 0' part is actually useless, but it makes it easier to understand it
                     count++;
                 }
             }
