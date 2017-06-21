@@ -179,7 +179,5 @@ public class SumInArray {
 
 ### Memory
 
-Typical memory consumption. ![](/assets/Screen Shot 2017-06-20 at 9.59.55 PM.png)
-
-
+Another aspect we need to consider when developing an algorithm is memory consumption. Typical memory consumption is shown in the tables below. In Java, there is 16 bytes overhead for each object and 8 bytes for an object reference. Array has 24 bytes overhead. ![](/assets/Screen Shot 2017-06-20 at 9.59.55 PM.png)
 
