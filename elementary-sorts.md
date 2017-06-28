@@ -64,7 +64,7 @@ class InsertionSortArray {
 
 ### Shell Sort
 
-
+O\(n^\(3/2\).
 
 ```
 class ShellSortArray {
@@ -96,7 +96,15 @@ class ShellSortArray {
 }
 ```
 
+### Example: shuffle cards randomly
 
+First idea: Generate random numbers and assign them to cards. Then sort the array. 
 
+Knuth shuffle: iterate through the cards and generate random number that is between 0 and **i** \(**i** is current index\).
 
+### Convex Hull
+
+![](/assets/Screen Shot 2017-06-27 at 7.17.24 PM.png)
+
+![](/assets/Screen Shot 2017-06-27 at 7.22.23 PM.png)
 
