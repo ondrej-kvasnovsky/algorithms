@@ -34,7 +34,7 @@ class SortArray {
 
 ### Insertion Sort
 
-O\(1/4\(n^2\)\)
+Complexity is about O\(1/4\(n^2\)\) in optimistic case - when the array is partially sorted, this algorithm works perfectly In worst case, it is O\(1/2\(n^2\)\) - when the values in reversed order.
 
 ```
 class InsertionSortArray {
@@ -61,6 +61,42 @@ class InsertionSortArray {
     }
 }
 ```
+
+### Shell Sort
+
+
+
+```
+class ShellSortArray {
+
+    static void main(String[] args) {
+        int[] array = [1, 5, 7, 3, 9, 1, -2]
+        println array
+        sort(array)
+        println array
+    }
+
+    static void sort(int[] a) {
+        int N = a.length;
+        int h = 1;
+        while (h < N / 3) h = 3 * h + 1; // 1, 4, 13, 40, 121, 364, ...
+
+        while (h >= 1) {  // h-sort the array.
+            for (int i = h; i < N; i++) {
+                for (int j = i; j >= h && a[j] < a[j - h]; j -= h) {
+                    int temp = a[j]
+                    a[j] = a[j - h];
+                    a[j - h] = temp;
+
+                }
+            }
+            h = h / 3;
+        }
+    }
+}
+```
+
+
 
 
 
