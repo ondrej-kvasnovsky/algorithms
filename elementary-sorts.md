@@ -98,13 +98,23 @@ class ShellSortArray {
 
 ### Example: shuffle cards randomly
 
-First idea: Generate random numbers and assign them to cards. Then sort the array. 
+First idea: Generate random numbers and assign them to cards. Then sort the array.
 
 Knuth shuffle: iterate through the cards and generate random number that is between 0 and **i** \(**i** is current index\).
 
 ### Convex Hull
 
-![](/assets/Screen Shot 2017-06-27 at 7.17.24 PM.png)
+The first approach to calculate a convex hull could be: 
+
+1. Find most left point
+2. Then find most right point to that point and repeat this until we get to the most left point
+
+```
+
+ 
+```
+
+
 
 ![](/assets/Screen Shot 2017-06-27 at 7.22.23 PM.png)
 
