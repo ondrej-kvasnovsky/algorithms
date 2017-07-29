@@ -5,10 +5,5 @@
 * [Analysis of Algorithms](analysis-of-algorithms.md)
 * [Stacks and Queues](stacks-and-queues.md)
 * [Elementary Sorts](elementary-sorts.md)
-* [Data Types](chapter1.md)
-* Sorting
-* Searching
-* Graphs
-* Strings
-* Elementary Sorts
+* [Elementary Sortsc](elementary-sorts.md)
 
