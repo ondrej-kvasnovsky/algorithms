@@ -6,5 +6,5 @@
 * [Stacks and Queues](stacks-and-queues.md)
 * [Elementary Sorts](elementary-sorts.md)
 * [Mergesort](merge-sort.md)
-* Quicksort
+* [Quicksort](quicksort.md)
 
