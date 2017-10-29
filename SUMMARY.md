@@ -7,4 +7,5 @@
 * [Elementary Sorts](elementary-sorts.md)
 * [Mergesort](merge-sort.md)
 * [Quicksort](quicksort.md)
+* [Binary Heaps](binary-heaps.md)
 
