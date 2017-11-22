@@ -8,4 +8,5 @@
 * [Mergesort](merge-sort.md)
 * [Quicksort](quicksort.md)
 * [Binary Heaps](binary-heaps.md)
+* [Palindroms](palindroms.md)
 
