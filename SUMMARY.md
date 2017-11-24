@@ -9,4 +9,5 @@
 * [Quicksort](quicksort.md)
 * [Binary Heaps](binary-heaps.md)
 * [Palindroms](palindroms.md)
+* [Prime factor](prime-factor.md)
 
