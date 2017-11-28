@@ -190,7 +190,7 @@ PRIME NUMBER:10000261
 PRIME NUMBER:10000271
 ```
 
-Be aware, if you are too eager with amount of threads and batch size, you will get this exception. 
+Be aware, if you are too eager with amount of threads and batch size, you will get this exception.
 
 ```
 java.lang.OutOfMemoryError: unable to create new native thread
