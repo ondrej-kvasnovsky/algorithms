@@ -10,4 +10,5 @@
 * [Binary Heaps](binary-heaps.md)
 * [Palindroms](palindroms.md)
 * [Prime factor](prime-factor.md)
+* [Prime Number](prime-number.md)
 
