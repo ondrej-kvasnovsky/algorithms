@@ -128,6 +128,7 @@ public class PrimeNumber {
     }
 
     private void findAllPrimeNumbersMultiTheaded(BigInteger startFrom) throws ExecutionException, InterruptedException, TimeoutException {
+        ExecutorService executorService = Executors.newFixedThreadPool(1000);
         BigInteger runningNumber = startFrom;
         int counter = 0;
         int batchSize = 100;
@@ -137,7 +138,7 @@ public class PrimeNumber {
             runningNumber = runningNumber.add(BigInteger.ONE);
             counter++;
             if (counter == batchSize) {
-                List<Future<BigInteger>> futures = Executors.newFixedThreadPool(100).invokeAll(tasks);
+                List<Future<BigInteger>> futures = executorService.invokeAll(tasks);
                 for (Future<BigInteger> future : futures) {
                     BigInteger foundNumber = future.get();
                     if (!foundNumber.equals(ZERO)) {
