@@ -27,23 +27,23 @@ public class PrimeNumber {
 }
 ```
 
-Now lets try to verify if some big number is a primary number. Lets pick a random number like, 
+Now lets try to verify if some big number is a primary number. Lets pick a random number like,
 
 ```
 isPrimeNumber(new BigInteger("1001000000000000000000000000000000021"))
 ```
 
-We find that that number is not prime number very quickly. Lets try to add 2 to that number. 
+We find that that number is not prime number very quickly. Lets try to add 2 to that number.
 
 ```
 isPrimeNumber(new BigInteger("1001000000000000000000000000000000023"))
 ```
 
-Probably, you won't be able to find it in reasonable time. It takes really a lot of time. 
+Probably, you won't be able to find it in reasonable time. It takes really a lot of time.
 
 ## Find all prime numbers
 
-If we would keep this algorithm run for few ethernities, we would maybe find the longest prime number so far discovered. This algorithm is the basic version, not optimized and thus very very slow type of algorithm. 
+If we would keep this algorithm run for few ethernities, we would maybe find the longest prime number so far discovered. This algorithm is the basic version, not optimized and thus very very slow type of algorithm.
 
 ```
 public class PrimeNumber {
@@ -72,17 +72,17 @@ public class PrimeNumber {
 }
 ```
 
-What would happen when we run the `findAllPrimeNumbers` with lests say `999999999999999999999999999999999`? 
+What would happen when we run the `findAllPrimeNumbers` with lests say `999999999999999999999999999999999`?
 
 ```
 findAllPrimeNumbers(new BigInteger("999999999999999999999999999999999"));
 ```
 
-We wouldn't get much far. It takes too much time to find number in single threaded process. 
+We wouldn't get much far. It takes too much time to find number in single threaded process.
 
 ## Find prime numbers using multi threaded code
 
-Another logical implication to speed up the search process is to use multiple CPUs to find the prime numbers. Lets say we want to create batches of 100 numbers and use 100 threads to find the numbers. We could write code like this to do it. 
+Another logical implication to speed up the search process is to use multiple CPUs to find the prime numbers. Lets say we want to create batches of 100 numbers and use 100 threads to find the numbers. We could write code like this to do it.
 
 ```
 import org.junit.Assert;
@@ -169,10 +169,9 @@ public class PrimeNumber {
         }
     }
 }
-
 ```
 
-Here is a sample output this program produces. You can experiment with size of batch and number of threads if you like this brute force approach. 
+Here is a sample output this program produces. You can experiment with size of batch and number of threads if you like this brute force approach.
 
 ```
 PRIME NUMBER:10000019
@@ -189,6 +188,12 @@ PRIME NUMBER:10000247
 PRIME NUMBER:10000253
 PRIME NUMBER:10000261
 PRIME NUMBER:10000271
+```
+
+Be aware, if you are too eager with amount of threads and batch size, you will get this exception. 
+
+```
+java.lang.OutOfMemoryError: unable to create new native thread
 ```
 
 
