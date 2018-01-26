@@ -153,10 +153,11 @@ class TripletsWithBinarySearch {
         int length = arr.length;
         for (int i = 0; i < length - 2; i++) { // O(n^2 n log(n))
             for (int j = i + 1; j < length - 1; j++) {
-                int key = -arr[i] - arr[j];
-                int k = Arrays.binarySearch(arr, j + 1, length, key);
-                if (k > j && arr[k] - key == 0) { // compare index of found with current position (j)
-                // this 'arr[k] - key == 0' part is actually useless, but it makes it easier to understand it
+                int key = arr[i] + arr[j];
+                int opposite = -key;
+                int k = Arrays.binarySearch(arr, j + 1, length, opposite);
+                if (k > j && arr[k] - opposite == 0) { // compare index of found with current position (j)
+// this 'arr[k] - key == 0' part is actually useless, but it makes it easier to understand it
                     count++;
                 }
             }
