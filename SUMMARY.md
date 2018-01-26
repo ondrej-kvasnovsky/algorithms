@@ -12,4 +12,5 @@
 * [Prime factor](prime-factor.md)
 * [Prime Number](prime-number.md)
 * [Finding Peak](finding-peak.md)
+* [Recursion](recursion.md)
 
