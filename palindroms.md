@@ -1,12 +1,12 @@
 # Palindroms
 
-[Palindroms](https://en.wikipedia.org/wiki/Palindromic_number) are strings or numbers that start and end with the same character sequence, for example ABCBA or 12321. 
+[Palindroms](https://en.wikipedia.org/wiki/Palindromic_number) are strings or numbers that start and end with the same character sequence, for example ABCBA or 12321.
 
 ## Lychrel Number
 
-Every number that does not become palindrom after couple of interations is called [Lychrel number](https://en.wikipedia.org/wiki/Lychrel_number). Here is an example. 
+Every number that does not become palindrom after couple of interations is called [Lychrel number](https://en.wikipedia.org/wiki/Lychrel_number). Here is an example.
 
-If we send there number like 1960000, it finds 3 palindroms in 1000 interactions. Interesting is that if we use 196 \(Lychrel number\), we are not able to find Palindrom \(nobody found one yet\). 
+If we send there number like 1960000, it finds 3 palindroms in 1000 interactions. Interesting is that if we use 196 \(Lychrel number\), we are not able to find Palindrom \(nobody found one yet\).
 
 ```
 boolean isPalindrom(String word) {
@@ -32,7 +32,7 @@ BigInteger temp = canidate
 }
 ```
 
-When we run this for 1960000, the algorithm finds the following palindroms. 
+When we run this for 1960000, the algorithm finds the following palindroms.
 
 ```
 Iteration: 1 found 1960691
