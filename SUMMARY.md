@@ -1,8 +1,8 @@
 # Summary
 
 * [Introduction](README.md)
-* [Union-Find Algorithms](union-find-algorithms.md)
 * [Analysis of Algorithms](analysis-of-algorithms.md)
+* [Union-Find Algorithms](union-find-algorithms.md)
 * [Stacks and Queues](stacks-and-queues.md)
 * [Elementary Sorts](elementary-sorts.md)
 * [Mergesort](merge-sort.md)
@@ -13,4 +13,5 @@
 * [Prime Number](prime-number.md)
 * [Finding Peak](finding-peak.md)
 * [Recursion](recursion.md)
+* [Binary Search](binary-search.md)
 
