@@ -22,6 +22,6 @@
   * [Linked List](data-structures/linked-list.md)
   * [Hash Table](data-structures/hash-table.md)
   * [Binary Tree](data-structures/binary-tree.md)
-  * [Binary Search Tree](data-structures/binary-search-tree.md)
   * [Heap](data-structures/heap.md)
+  * [Binary Search Tree](data-structures/binary-search-tree.md)
 
