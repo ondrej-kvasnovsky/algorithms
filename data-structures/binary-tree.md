@@ -72,7 +72,7 @@ An alternative to represent trees using node is to keep the values in array. Roo
 
 ![](/assets/600px-Binary_tree_in_array.svg.png)
 
-Here is an implementation of binary tree that stores and obtains elements from binary tree. 
+Here is an implementation of binary tree that stores and obtains elements from binary tree.
 
 ```
 class BinaryTreeUsingArray {
@@ -110,7 +110,7 @@ class BinaryTreeUsingArray {
                 builder.append("\n");
                 builder.append(values[i]);
                 builder.append(" ");
-                stop = stop << 1;
+                stop = stop << 1; // 1, 2, 4, 8, 16, 32 ...
             }
         }
         return builder.toString();
@@ -118,7 +118,7 @@ class BinaryTreeUsingArray {
 }
 ```
 
-Here is the output. 
+Here is the output.
 
 ```
 public class BinaryTreeDemo {
@@ -139,14 +139,14 @@ public class BinaryTreeDemo {
 }
 ```
 
-Here is the output. 
+Here is the output.
 
 ```
 [A, B, C, D, E, F, G, null, null, null]
 
 A 
 B C 
-D E F G 
+D E F G
 ```
 
 ### Balanced & Unbalanced Trees
