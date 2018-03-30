@@ -24,5 +24,5 @@
   * [Binary Tree](data-structures/binary-tree.md)
   * [Heap](data-structures/heap.md)
   * [Binary Search Tree](data-structures/binary-search-tree.md)
-  * Trie
+  * [Trie](data-structures/trie.md)
 
