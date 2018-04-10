@@ -1,10 +1,10 @@
 # Hash Table
 
-Hash table offers a data structure that offers complexity of O\(1\) to insert and obtain element from it. We need to be able to calculate hash or position of element based on its value. 
+Hash table offers a data structure that offers complexity of `O(1)` to insert and obtain element from it. We need to be able to calculate hash or position of element based on its value.
 
 > If you are interesting in hash table practices, have a look at this [chapter in Java Handbook](https://ondrej-kvasnovsky.gitbooks.io/java-handbook/content/chapter1.html).
 
-Lets create simple hash table to demonstrate how they are implemented. We can put couple of items into this hash table. If we would like to expand values array when more elements come, we would have to add more check and resizing. But this is omitted from this implementation for easier understanding. 
+Lets create simple hash table to demonstrate how they are implemented. We can put couple of items into this hash table. If we would like to expand values array when more elements come, we would have to add more check and resizing. But this is omitted from this implementation for easier understanding.
 
 ```
 import java.util.Arrays;
@@ -50,7 +50,7 @@ class HashTable {
 }
 ```
 
-Now we can try to put and remove some elements. 
+Now we can try to put and remove some elements.
 
 ```
 public class HashTableDemo {
@@ -67,7 +67,7 @@ public class HashTableDemo {
 
         table.remove("World");
         System.out.println(table);
-        
+
         table.put("123");
         System.out.println(table);
 
@@ -77,7 +77,7 @@ public class HashTableDemo {
 }
 ```
 
-Observe how are the values placed in the array. 
+Observe how are the values placed in the array.
 
 ```
 16

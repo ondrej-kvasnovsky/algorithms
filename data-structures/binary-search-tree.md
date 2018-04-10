@@ -4,7 +4,7 @@
 
 BST is good for searching in general `O(log n)`. Heaps are the best when we want to get maximum or minimum of set of values, complexity of `O(1)`. More about the difference between [heap and BST](https://cs.stackexchange.com/questions/27860/whats-the-difference-between-a-binary-search-tree-and-a-binary-heap).
 
-The basic algorithm is: when we want to put a value into the tree, we go from the root and we put smaller values on left and higher values on right side. 
+The basic algorithm is: when we want to put a value into the tree, we go from the root and we put smaller values on left and higher values on right side.
 
 ```
 import java.util.LinkedList;
@@ -186,7 +186,7 @@ public class BinarySearchTreeDemo {
 }
 ```
 
-Here is the output. 
+Here is the output.
 
 ```
 BST:
@@ -205,7 +205,7 @@ Pre order:
 In order:
 0 2 5 10 15 20 25 
 Post order:
-0 2 5 20 25 15 10 
+0 2 5 20 25 15 10
 ```
 
 
