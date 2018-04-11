@@ -25,4 +25,6 @@
   * [Heap](data-structures/heap.md)
   * [Binary Search Tree](data-structures/binary-search-tree.md)
   * [Trie](data-structures/trie.md)
+* [Dynamic Programming](dynamic-programming.md)
+  * Knapsack problem
 
