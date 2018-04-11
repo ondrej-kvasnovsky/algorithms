@@ -26,5 +26,5 @@
   * [Binary Search Tree](data-structures/binary-search-tree.md)
   * [Trie](data-structures/trie.md)
 * [Dynamic Programming](dynamic-programming.md)
-  * Knapsack problem
+  * [Knapsack problem](dynamic-programming/knapsack-problem.md)
 
