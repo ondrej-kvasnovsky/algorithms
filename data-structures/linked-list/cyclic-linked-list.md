@@ -8,15 +8,15 @@ if (element == element1 || element == element2) {
 }
 ```
 
-We want to iterate through the array using three pointers. The first pointer is going from one node to another, on by one. The other to pointers will be faster. If one of the faster pointers catches the slow pointer, there is a loop. 
+We want to iterate through the array using three pointers. The first pointer is going from one node to another, on by one. The other to pointers will be faster. If one of the faster pointers catches the slow pointer, there is a loop.
 
-Lets create the following loop in a linked list. 
+Lets create the following loop in a linked list.
 
 ```
 a -> b -> c -> d -> e -> a
 ```
 
-Lets iterate the list using slow pointer and two fast pointers. Each line means one iteration. 
+Lets iterate the list using slow pointer and two fast pointers. Each line means one iteration.
 
 ```
 1. slow: a, fast1: b, fast2: c
@@ -25,10 +25,10 @@ Lets iterate the list using slow pointer and two fast pointers. Each line means 
 4. slow: d, fast1: c, fast2: d (d == d, so there is a loop, otherwise, it would never get there)
 ```
 
-Here is the algorithm. 
+Here is the algorithm.
 
 ```
-public class Question2 {
+public class Demo {
 
     public static void main(String... args) {
         LinkedList<String> list = new LinkedList<>();
@@ -79,7 +79,7 @@ public class Question2 {
 }
 ```
 
-We are going to use this implementation of a linked list. 
+We are going to use this implementation of a linked list.
 
 ```
 class LinkedList<T> {
