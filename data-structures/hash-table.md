@@ -1,19 +1,19 @@
-# Hash Table
+# Set
 
-Hash table offers a data structure that offers complexity of `O(1)` to insert and obtain element from it. We need to be able to calculate hash or position of element based on its value.
+Hash set offers a data structure that offers complexity of `O(1)` to insert and obtain element from it. We need to be able to calculate hash or position of element based on its value.
 
-> If you are interesting in hash table practices, have a look at this [chapter in Java Handbook](https://ondrej-kvasnovsky.gitbooks.io/java-handbook/content/chapter1.html).
+> If you are interesting in sets, have a look at this [chapter in Java Handbook](https://ondrej-kvasnovsky.gitbooks.io/java-handbook/content/chapter1.html).
 
-Lets create simple hash table to demonstrate how they are implemented. We can put couple of items into this hash table. If we would like to expand values array when more elements come, we would have to add more check and resizing. But this is omitted from this implementation for easier understanding.
+Lets create simple hash set to demonstrate how they are implemented. We can put couple of items into this hash set. If we would like to expand values array when more elements come, we would have to add more check and resizing. But this is omitted from this implementation for easier understanding.
 
 ```
 import java.util.Arrays;
 
-class HashTable {
+class HashSet {
 
     private String[] values;
 
-    public HashTable() {
+    public HashSet() {
         values = new String[getMaxCapacity(10)];
     }
 
@@ -53,26 +53,26 @@ class HashTable {
 Now we can try to put and remove some elements.
 
 ```
-public class HashTableDemo {
+public class HashSetDemo {
 
     public static void main(String[] args) {
-        HashTable table = new HashTable();
-        System.out.println(table.getCapacity());
+        HashSet set = new HashSet();
+        System.out.println(set.getCapacity());
 
-        table.put("Hello");
-        System.out.println(table);
+        set.put("Hello");
+        System.out.println(set);
 
-        table.put("World");
-        System.out.println(table);
+        set.put("World");
+        System.out.println(set);
 
-        table.remove("World");
-        System.out.println(table);
+        set.remove("World");
+        System.out.println(set);
 
-        table.put("123");
-        System.out.println(table);
+        set.put("123");
+        System.out.println(set);
 
-        table.put("1234");
-        System.out.println(table);
+        set.put("1234");
+        System.out.println(set);
     }
 }
 ```
