@@ -24,10 +24,11 @@
     * [Cyclic Linked List](data-structures/linked-list/cyclic-linked-list.md)
     * [Find Nth Element from End](data-structures/linked-list/find-nth-element-from-end.md)
   * [Set](data-structures/hash-table.md)
+  * [Map](data-structures/map.md)
   * [Binary Tree](data-structures/binary-tree.md)
   * [Heap](data-structures/heap.md)
   * [Binary Search Tree](data-structures/binary-search-tree.md)
-  * [Trie](data-structures/trie.md)
+  * Map
 * [Sequences](sequences.md)
   * [Fibonacci Sequence](sequences/fibonacci-sequence.md)
 * [Prime factor](prime-factor.md)
