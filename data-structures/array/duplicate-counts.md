@@ -1,6 +1,6 @@
 # Duplicate Counts
 
-The idea is: put all items into a map, if an item exists, increase value behind a key. Ideally, sort the tree by value \(it results in not very straight forward solution in Java\).
+The idea is: put all items into a map, if an item exists, increase value behind a key. Ideally, sort the tree by value \(it results in not very straight forward solution in Java 8\).
 
 ```
 import java.util.*;
