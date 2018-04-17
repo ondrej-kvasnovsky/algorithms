@@ -1,6 +1,6 @@
 # Arrays
 
-Arrays are usually fixed size collection of items. An array is a basic data structure that allocates memory that will hold our values. 
+Arrays are usually fixed size collection of items. An array is a basic data structure that allocates memory that will hold our values.
 
 > To push the arrays to the limits and see that an array really allocates memory, try to create array of huge size, like `int[] hugeArray = new int[2000000000]`. We should get `java.lang.OutOfMemoryError: Java heap space` exception with default JVM memory settings.
 
@@ -31,7 +31,7 @@ public class ArraysDemo {
 }
 ```
 
-Here is the output. 
+Here is the output.
 
 ```
 Sum is 22
@@ -41,9 +41,9 @@ Sum is 22
 
 # Lists
 
-Lists are similar to arrays but they are dynamically expanding. Some languages do not distinguish between arrays and lists. A list implementations are using arrays to store values. 
+Lists are similar to arrays but they are dynamically expanding. Some languages do not distinguish between arrays and lists. A list implementations are using arrays to store values.
 
-Here is a naive implementation of list. This list resizes the array when all the positions in the array are occupied and user requests to insert another item into a list. 
+Here is a naive implementation of list. This list resizes the array when all the positions in the array are occupied and user requests to insert another item into a list.
 
 ```
 import java.util.Arrays;
@@ -75,7 +75,7 @@ public class NaiveList {
 }
 ```
 
-We can use the naive implementation of list now. 
+We can use the naive implementation of list now.
 
 ```
 import java.util.Arrays;
@@ -102,7 +102,7 @@ public class ListsDemo {
 }
 ```
 
-Here is what the code above prints. 
+Here is what the code above prints.
 
 ```
 John 1
