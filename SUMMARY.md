@@ -19,6 +19,7 @@
     * [Find Middle Element](data-structures/linked-list/find-middle-element.md)
     * [Doubly Linked List](data-structures/linked-list/doubly-linked-list.md)
     * [Cyclic Linked List](data-structures/linked-list/cyclic-linked-list.md)
+    * [Find Nth Element from End](data-structures/linked-list/find-nth-element-from-end.md)
   * [Hash Table](data-structures/hash-table.md)
   * [Binary Tree](data-structures/binary-tree.md)
   * [Heap](data-structures/heap.md)
