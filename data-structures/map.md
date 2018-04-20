@@ -1,6 +1,6 @@
 # Map
 
-Map stores values behind keys. That said, values in a map can be obtained using a key. 
+Map stores values behind keys. That said, values in a map can be obtained using a key.
 
 ```
 class HashMap<K, V> {
@@ -53,10 +53,9 @@ class HashMap<K, V> {
         }
     }
 }
-
 ```
 
-Lets try to use the hash map. 
+Lets try to use the hash map.
 
 ```
 public class Test {
@@ -88,7 +87,7 @@ public class Test {
 }
 ```
 
-How the position is calculated. 
+How the position is calculated.
 
 ```
 println "a".hashCode()
@@ -101,7 +100,7 @@ println "k".hashCode() % 10
 println "u".hashCode() % 10
 ```
 
-Here is the output. 
+Here is the output.
 
 ```
 97
