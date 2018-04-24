@@ -16,7 +16,7 @@ Lets look at Java code that would be a first quick and dirty answer for given pr
 
 ### Given N distinct integers, how many zeros is there?
 
-O\(n\)
+`O(n)`
 
 ```
 class Zeros {
@@ -35,7 +35,7 @@ class Zeros {
 
 ### Given N distinct integers, how many combination of two sum to exactly zero?
 
-O\(n^2\)
+`O(n^2)`
 
 ```
 class Doubles {
@@ -56,7 +56,7 @@ class Doubles {
 
 ### Given N distinct integers, how many triples sum to exactly zero?
 
-O\(n^3\)
+`O(n^3)`
 
 ```
 class Triplets {
