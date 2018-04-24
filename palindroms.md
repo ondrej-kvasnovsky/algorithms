@@ -2,6 +2,35 @@
 
 [Palindroms](https://en.wikipedia.org/wiki/Palindromic_number) are strings or numbers that start and end with the same character sequence, for example ABCBA or 12321.
 
+### Is Number a Palindrom?
+
+```
+public class IsNumberPalindrom {
+
+    public static void main(String... args) {
+        IsNumberPalindrom is = new IsNumberPalindrom();
+
+        System.out.println(is.isPalindrome(1));
+        System.out.println(is.isPalindrome(-1));
+        System.out.println(is.isPalindrome(1221));
+    }
+
+    public boolean isPalindrome(int x) {
+        String text = String.valueOf(x);
+        int start = 0;
+        int end = text.length() - 1;
+        while(start < end) {
+            if (text.charAt(start) != text.charAt(end)) {
+                return false;
+            }
+            start++;
+            end--;
+        }
+        return true;
+    }
+}
+```
+
 ## Lychrel Number
 
 Every number that does not become palindrom after couple of interations is called [Lychrel number](https://en.wikipedia.org/wiki/Lychrel_number). Here is an example.

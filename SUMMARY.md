@@ -6,6 +6,7 @@
   * [Union-Find Algorithms](union-find-algorithms.md)
   * [Finding Peak](finding-peak.md)
   * [Binary Search](binary-search.md)
+  * [Find Sum in Array](find-sum-in-array.md)
 * [Sorting](sorting.md)
   * [Elementary Sorts](elementary-sorts.md)
   * [Bubble Sort](bubble-sort.md)
@@ -34,6 +35,5 @@
 * [Prime factor](prime-factor.md)
 * [Palindroms](palindroms.md)
 * [Prime Number](prime-number.md)
-* Sequences
 * [Roman Numbers](roman-numbers.md)
 
