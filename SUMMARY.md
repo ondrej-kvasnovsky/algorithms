@@ -32,8 +32,10 @@
   * Map
 * [Sequences](sequences.md)
   * [Fibonacci Sequence](sequences/fibonacci-sequence.md)
-* [Prime factor](prime-factor.md)
+* [Dynamic Programming](dynamic-programmimg.md)
+  * [Knapsack problem](dynamic-programming/knapsack-problem.md)
 * [Palindroms](palindroms.md)
 * [Prime Number](prime-number.md)
-* [Roman Numbers](roman-numbers.md)
+* [Prime factor](prime-factor.md)
+* Dynamic Programmimg
 
