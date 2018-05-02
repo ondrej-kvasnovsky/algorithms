@@ -122,5 +122,51 @@ Then we get the following output.
 8
 ```
 
-When we look at that, we find that we didn't need start index at all. Also, va
+When we look at that, we find that we didn't need start index at all. With this approach, it might be better to just create an index array that would keep indexes of the values. 
+
+```
+import java.util.ArrayList;
+import java.util.List;
+
+public class DotProduct {
+
+    public static void main(String... args) {
+        DotProduct dp = new DotProduct();
+
+        int[] a = new int[]{0, 0, 0, 0, 1, 0, 5};
+        int[] b = new int[]{1, 0, 0, 0, 3, 0, 1};
+
+        int[] index = dp.index(a, b);
+        int dot2 = dp.dot(a, b, index);
+        System.out.println(dot2);
+    }
+
+    public int dot(int[] a, int[] b, int[] index) {
+        int result = 0;
+        for (int i = 0; i < index.length; i++) {
+            int indexValue = index[i];
+            result += a[indexValue] * b[indexValue];
+        }
+        return result;
+    }
+
+    public int[] index(int[] a, int[] b) {
+        List<Integer> temp = new ArrayList<>();
+
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] != 0 && b[i] != 0) {
+                temp.add(i);
+            }
+        }
+
+        int[] result = new int[temp.size()];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = temp.get(i);
+        }
+        return result;
+    }
+}
+```
+
+
 
