@@ -16,6 +16,7 @@
   * [Array & List](data-structures/array.md)
     * [Find Duplicates](data-structures/array/find-duplicates.md)
     * [Duplicate Counts](data-structures/array/duplicate-counts.md)
+    * [Dot Product](data-structures/array/dot-product.md)
   * [Matrix](data-structures/matrix.md)
   * [Stack](data-structures/stack.md)
   * [Queue](data-structures/queue.md)
