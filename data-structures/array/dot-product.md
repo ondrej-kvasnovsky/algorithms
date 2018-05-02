@@ -31,6 +31,8 @@ public class DotProduct {
 
 We can see that the product of those to arrays is 8.
 
+### Sparse Vector
+
 For sparse vectors, that contain a lot of 0s, we might safe some time and before we process them, we could compress them.
 
 The first idea I came up with was to create buckets of 0. For this array `{ 0, 0, 0, 0, 1, 0, 5 }`  we I could say there is a bucket of 0s from 0 to 3rd position. And then from 5th to 5th position.
@@ -122,7 +124,7 @@ Then we get the following output.
 8
 ```
 
-When we look at that, we find that we didn't need start index at all. With this approach, it might be better to just create an index array that would keep indexes of the values. 
+When we look at that, we find that we didn't need start index at all. With this approach, it might be better to just create an index array that would keep indexes of the values.
 
 ```
 import java.util.ArrayList;
