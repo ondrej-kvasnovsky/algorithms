@@ -1,6 +1,6 @@
 # Dot Product
 
-[Dot Product](https://en.wikipedia.org/wiki/Dot_product) is single number that is created by multiplication of two vectors \(two arrays\) of the same length. 
+[Dot Product](https://en.wikipedia.org/wiki/Dot_product) is single number that is created by multiplication of two vectors \(two arrays\) of the same length.
 
 ```
 public class DotProduct {
@@ -29,13 +29,13 @@ public class DotProduct {
 }
 ```
 
-We can see that the product of those to arrays is 8. 
+We can see that the product of those to arrays is 8.
 
-For sparse vectors, that contain a lot of 0s, we might safe some time and before we process them, we could compress them. 
+For sparse vectors, that contain a lot of 0s, we might safe some time and before we process them, we could compress them.
 
-The first idea I came up with was to create buckets of 0. For this array `{ 0, 0, 0, 0, 1, 0, 5 }`  we I could say there is a bucket of 0s from 0 to 3rd position. And then from 5th to 5th position. 
+The first idea I came up with was to create buckets of 0. For this array `{ 0, 0, 0, 0, 1, 0, 5 }`  we I could say there is a bucket of 0s from 0 to 3rd position. And then from 5th to 5th position.
 
- Here is the attempt to implement that. The advantage is that we don't have to compress both arrays, but just one. 
+Here is the attempt to implement that. The advantage is that we don't have to compress both arrays, but just one.
 
 ```
 import java.util.ArrayList;
@@ -112,10 +112,9 @@ public class DotProduct {
 
         return result;
     }
-
 ```
 
-Then we get the following output. 
+Then we get the following output.
 
 ```
 [0: (0, 3), 1: (4, 4), 0: (5, 5), 5: (6, 6)]
@@ -123,5 +122,5 @@ Then we get the following output.
 8
 ```
 
-
+When we look at that, we find that we didn't need start index at all. Also, va
 
