@@ -24,6 +24,7 @@
     * [Find Duplicates](data-structures/array/find-duplicates.md)
     * [Duplicate Counts](data-structures/array/duplicate-counts.md)
     * [Dot Product](data-structures/array/dot-product.md)
+    * [Remove Duplicates from Sorted Array](data-structures/array/remove-duplicates-from-sorted-array.md)
   * [Matrix](data-structures/matrix.md)
   * [Stack](data-structures/stack.md)
     * [Valid Parentheses](data-structures/stack/valid-parentheses.md)
