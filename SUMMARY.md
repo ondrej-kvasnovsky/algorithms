@@ -2,6 +2,12 @@
 
 * [Introduction](README.md)
 * [Analysis of Algorithms](analysis-of-algorithms.md)
+* [Numbers](numbers.md)
+  * [Reverse Integer](reverse-integer.md)
+  * [Palindroms](palindroms.md)
+  * [Prime factor](prime-factor.md)
+  * [Prime Number](prime-number.md)
+  * [Roman to Integer](roman-to-integer.md)
 * [Searching](finding.md)
   * [Union-Find Algorithms](union-find-algorithms.md)
   * [Finding Peak](finding-peak.md)
@@ -25,6 +31,7 @@
     * [Doubly Linked List](data-structures/linked-list/doubly-linked-list.md)
     * [Cyclic Linked List](data-structures/linked-list/cyclic-linked-list.md)
     * [Find Nth Element from End](data-structures/linked-list/find-nth-element-from-end.md)
+    * [Add Two Numbers](data-structures/linked-list/add-two-numbers.md)
   * [Set](data-structures/hash-table.md)
   * [Map](data-structures/map.md)
   * [Binary Tree](data-structures/binary-tree.md)
@@ -35,8 +42,4 @@
   * [Fibonacci Sequence](sequences/fibonacci-sequence.md)
 * [Dynamic Programming](dynamic-programmimg.md)
   * [Knapsack problem](dynamic-programming/knapsack-problem.md)
-* [Palindroms](palindroms.md)
-* [Prime Number](prime-number.md)
-* [Prime factor](prime-factor.md)
-* Dynamic Programmimg
 
