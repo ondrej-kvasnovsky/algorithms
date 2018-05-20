@@ -42,6 +42,8 @@
     * [Single Number](data-structures/hash-table/single-number.md)
     * [Contains Duplicate](data-structures/hash-table/contains-duplicate.md)
   * [Map](data-structures/map.md)
+    * [Two Sum](data-structures/map/two-sum.md)
+    * [Isomorphic Strings](data-structures/map/isomorphic-strings.md)
   * [Binary Tree](data-structures/binary-tree.md)
   * [Heap](data-structures/heap.md)
   * [Binary Search Tree](data-structures/binary-search-tree.md)
