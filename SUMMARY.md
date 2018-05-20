@@ -44,6 +44,8 @@
   * [Map](data-structures/map.md)
     * [Two Sum](data-structures/map/two-sum.md)
     * [Isomorphic Strings](data-structures/map/isomorphic-strings.md)
+    * [Minimum Index Sum of Two Lists](data-structures/map/minimum-index-sum-of-two-lists.md)
+    * [First Unique Character in a String](data-structures/map/first-unique-character-in-a-string.md)
   * [Binary Tree](data-structures/binary-tree.md)
   * [Heap](data-structures/heap.md)
   * [Binary Search Tree](data-structures/binary-search-tree.md)
