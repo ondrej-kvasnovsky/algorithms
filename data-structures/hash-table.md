@@ -4,6 +4,48 @@ Hash set offers a data structure that offers complexity of `O(1)` to insert and 
 
 > If you are interesting in sets, have a look at this [chapter in Java Handbook](https://ondrej-kvasnovsky.gitbooks.io/java-handbook/content/chapter1.html).
 
+Here is a naive implementation of hash set. 
+
+```
+class MyHashSet {
+    
+    private Integer[] values = new Integer[1000000];
+    
+    public void add(int key) {
+        values[hash(key)] = key;
+    }
+    
+    public void remove(int key) {
+        values[hash(key)] = null;
+    }
+    
+    /** Returns true if this set did not already contain the specified element */
+    public boolean contains(int key) {
+        return values[hash(key)] != null;
+    }
+    
+    public int hash(int value) {
+        return value % values.length;
+    }
+}
+```
+
+We can perform the following with the hash set we have created. 
+
+```
+MyHashSet hashSet = new MyHashSet();
+hashSet.add(1);         
+hashSet.add(2);         
+hashSet.contains(1);    // returns true
+hashSet.contains(3);    // returns false (not found)
+hashSet.add(2);          
+hashSet.contains(2);    // returns true
+hashSet.remove(2);          
+hashSet.contains(2);    // returns false (already removed)
+```
+
+## Advanced hashing and re-sizing hash set. 
+
 Lets create simple hash set to demonstrate how they are implemented. We can put couple of items into this hash set. If we would like to expand values array when more elements come, we would have to add more check and resizing. But this is omitted from this implementation for easier understanding.
 
 ```
