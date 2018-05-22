@@ -50,6 +50,7 @@
     * [Intersection of Two Arrays II](data-structures/map/intersection-of-two-arrays-ii.md)
     * [Logger Rate Limiter](data-structures/map/logger-rate-limiter.md)
     * [Group Anagrams](data-structures/map/group-anagrams.md)
+    * [Group Shifted Strings](data-structures/map/group-shifted-strings.md)
   * [Binary Tree](data-structures/binary-tree.md)
   * [Heap](data-structures/heap.md)
   * [Binary Search Tree](data-structures/binary-search-tree.md)

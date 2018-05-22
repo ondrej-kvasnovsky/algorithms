@@ -17,9 +17,9 @@ Output:
 **Note:**
 
 * All inputs will be in lowercase.
-* The order of your output does not matter.
+* The order of your output does not matter.
 
-Here is a solution using hash map. 
+Here is a solution using hash map.
 
 ```
 class Solution {
@@ -34,7 +34,7 @@ class Solution {
             list.add(s);
             map.put(sorted, list);
         }
-        
+
         List<List<String>> result = new ArrayList<>();
         Iterator<List<String>> iterator = map.values().iterator();
         while(iterator.hasNext()) {
@@ -45,5 +45,5 @@ class Solution {
 }
 ```
 
-
+Other solution might be to compile string into numerical string. First we would count all the letters, how many times they occur in the string? For example, "aab" would become a:2, b:1. Then we would create a template that would consist from all the letters \(lets say only lower case is used\): \`2:1::::::::::::::::\`. Then we can use these strings as a keys. 
 
