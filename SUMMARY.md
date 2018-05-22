@@ -48,6 +48,7 @@
     * [Minimum Index Sum of Two Lists](data-structures/map/minimum-index-sum-of-two-lists.md)
     * [First Unique Character in a String](data-structures/map/first-unique-character-in-a-string.md)
     * [Intersection of Two Arrays II](data-structures/map/intersection-of-two-arrays-ii.md)
+    * [Logger Rate Limiter](data-structures/map/logger-rate-limiter.md)
   * [Binary Tree](data-structures/binary-tree.md)
   * [Heap](data-structures/heap.md)
   * [Binary Search Tree](data-structures/binary-search-tree.md)
