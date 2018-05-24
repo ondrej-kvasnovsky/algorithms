@@ -42,6 +42,7 @@
     * [Single Number](data-structures/hash-table/single-number.md)
     * [Contains Duplicate](data-structures/hash-table/contains-duplicate.md)
     * [Contains Duplicate II](data-structures/map/contains-duplicate-ii.md)
+    * [Jewels and Stones](data-structures/hash-table/jewels-and-stones.md)
   * [Map](data-structures/map.md)
     * [Two Sum](data-structures/map/two-sum.md)
     * [Isomorphic Strings](data-structures/map/isomorphic-strings.md)
