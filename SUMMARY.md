@@ -59,6 +59,7 @@
     * [4Sum II](data-structures/hash-table/4sum-ii.md)
     * [Top K Frequent Elements](data-structures/map/top-k-frequent-elements.md)
     * [Unique Word Abbreviation](data-structures/map/unique-word-abbreviation.md)
+    * [Insert Delete GetRandom O\(1\)](data-structures/map/insert-delete-getrandom-o1.md)
   * [Binary Tree](data-structures/binary-tree.md)
   * [Heap](data-structures/heap.md)
   * [Binary Search Tree](data-structures/binary-search-tree.md)
