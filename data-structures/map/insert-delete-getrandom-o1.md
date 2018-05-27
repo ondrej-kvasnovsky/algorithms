@@ -34,19 +34,19 @@ randomSet.insert(2);
 randomSet.getRandom();
 ```
 
-Here is a solution. When we are removing, we want to find an element to remove. 
+Here is a solution. When we are removing, we want to find an element to remove.
 
 ```
 class RandomizedSet {
-    
+
     // create list that contains unique values
     // create set that will make sure we work only with unique values
     private Set<Integer> set = new HashSet<>();
     private List<Integer> list = new ArrayList<>();
-    
+
     public RandomizedSet() {
     }
-    
+
     /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */
     public boolean insert(int val) {
         boolean added = set.add(val);
@@ -55,7 +55,7 @@ class RandomizedSet {
         }
         return added;
     }
-    
+
     /** Removes a value from the set. Returns true if the set contained the specified element. */
     public boolean remove(int val) {
         boolean removed = set.remove(val);
@@ -69,27 +69,26 @@ class RandomizedSet {
         }
         return removed;
     }
-    
+
     /** Get a random element from the set. */
     public int getRandom() {
         Random r = new Random();
         int random = r.nextInt(list.size());
         return list.get(random);
     }
-
 ```
 
-Other solution is to keep positions. Then we need to lower all position from the removed position in the list.
+Other solution is to store positions. Then we need to lower all position from the removed position in the list.
 
 ```
 class RandomizedSet {
 
     private Map<Integer, Integer> positions = new HashMap<>();
     private List<Integer> list = new ArrayList<>();
-    
+
     public RandomizedSet() {
     }
-    
+
     /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */
     public boolean insert(int val) {
         boolean isContained = positions.containsKey(val);
@@ -100,7 +99,7 @@ class RandomizedSet {
         positions.put(val, list.size() - 1);
         return true;
     }
-    
+
     /** Removes a value from the set. Returns true if the set contained the specified element. */
     public boolean remove(int val) {
         boolean isContained = positions.containsKey(val);
@@ -118,7 +117,7 @@ class RandomizedSet {
         positions.remove(val);
         return true;
     }
-    
+
     /** Get a random element from the set. */
     public int getRandom() {
         Random r = new Random();
