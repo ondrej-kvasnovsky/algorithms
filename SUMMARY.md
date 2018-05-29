@@ -33,6 +33,8 @@
     * [Duplicate Counts](data-structures/array/duplicate-counts.md)
     * [Find Duplicates](data-structures/array/find-duplicates.md)
     * Implement strStr\(\)
+    * [Reverse String](data-structures/array/reverse-string.md)
+    * [Array Partition I](data-structures/array/array-partition-i.md)
   * [Matrix](data-structures/matrix.md)
   * [Stack](data-structures/stack.md)
     * [Valid Parentheses](data-structures/stack/valid-parentheses.md)
