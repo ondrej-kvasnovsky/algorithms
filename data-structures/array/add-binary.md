@@ -35,13 +35,18 @@ class Solution {
             int bNum = bIndex >= 0 ? (b.charAt(bIndex) - 48) : 0;
             int sum = aNum + bNum + carry;
             
-            if (sum > 1) {
+            if (sum == 3) {
+                chars.add('1');
+                carry = 1;
+            } else if (sum == 2) {
                 chars.add('0');
                 carry = 1;
             } else if (sum == 1) {
                 chars.add('1');
+                carry = 0;
             } else {
                 chars.add('0');
+                carry = 0;
             }
             
             aIndex--;
