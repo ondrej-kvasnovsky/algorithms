@@ -2,7 +2,7 @@
 
 Given two binary strings, return their sum \(also a binary string\).
 
-The input strings are both**non-empty**and contains only characters`1`or `0`.
+The input strings are both**non-empty**and contains only characters`1`or `0`.
 
 **Example 1:**
 
@@ -20,8 +20,6 @@ Output: "10101"
 
 # Solution
 
-
-
 ```
 class Solution {
     public String addBinary(String a, String b) {
@@ -33,10 +31,10 @@ class Solution {
         int carry = 0;
         while (aIndex >= 0 || bIndex >= 0) {
             
-            int aNum = aIndex >= 0 ? a.charAt(aIndex) : 0;
-            int bNum = bIndex >= 0 ? b.charAt(bIndex) : 0;
-            
+            int aNum = aIndex >= 0 ? (a.charAt(aIndex) - 48) : 0;
+            int bNum = bIndex >= 0 ? (b.charAt(bIndex) - 48) : 0;
             int sum = aNum + bNum + carry;
+            
             if (sum > 1) {
                 chars.add('0');
                 carry = 1;
