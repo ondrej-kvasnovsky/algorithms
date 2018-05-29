@@ -23,11 +23,13 @@ Explanation: There is no common prefix among the input strings.
 
 All given inputs are in lowercase letters`a-z`.
 
-Here is a solution. 
+## Solution
+
+Here is a solution.
 
 ```
 class Solution {
-    
+
     public String onlyCommonPrefix(String s1, String s2) {
         String s = "";
         int i = 0;
@@ -51,7 +53,7 @@ class Solution {
         }
         return s;
     }
-    
+
     public String longestCommonPrefix(String[] strs) {
         String commonPrefix = null;
         for (String s : strs) {
@@ -64,6 +66,10 @@ class Solution {
     }
 }
 ```
+
+
+
+
 
 
 
