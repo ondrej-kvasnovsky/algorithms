@@ -28,11 +28,11 @@
     * [Diagonal Traverse](data-structures/array/diagonal-traverse.md)
     * [Spiral Matrix](data-structures/array/spiral-matrix.md)
     * [Pascal's Triangle](data-structures/array/pascals-triangle.md)
+    * [Implement strStr\(\)](data-structures/array/implement-strstr.md)
     * [Add Binary](data-structures/array/add-binary.md)
     * [Duplicate Counts](data-structures/array/duplicate-counts.md)
     * [Find Duplicates](data-structures/array/find-duplicates.md)
-    * [Dot Product](data-structures/array/dot-product.md)
-    * Add Binary
+    * Implement strStr\(\)
   * [Matrix](data-structures/matrix.md)
   * [Stack](data-structures/stack.md)
     * [Valid Parentheses](data-structures/stack/valid-parentheses.md)
