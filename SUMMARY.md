@@ -26,6 +26,7 @@
     * [Largest Number At Least Twice of Others](data-structures/array/largest-number-at-least-twice-of-others.md)
     * [Plus One](data-structures/array/plus-one.md)
     * [Diagonal Traverse](data-structures/array/diagonal-traverse.md)
+    * [Spiral Matrix](data-structures/array/spiral-matrix.md)
     * [Duplicate Counts](data-structures/array/duplicate-counts.md)
     * [Find Duplicates](data-structures/array/find-duplicates.md)
     * [Dot Product](data-structures/array/dot-product.md)
