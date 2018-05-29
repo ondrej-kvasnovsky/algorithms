@@ -27,10 +27,12 @@
     * [Plus One](data-structures/array/plus-one.md)
     * [Diagonal Traverse](data-structures/array/diagonal-traverse.md)
     * [Spiral Matrix](data-structures/array/spiral-matrix.md)
+    * [Pascal's Triangle](data-structures/array/pascals-triangle.md)
+    * [Add Binary](data-structures/array/add-binary.md)
     * [Duplicate Counts](data-structures/array/duplicate-counts.md)
     * [Find Duplicates](data-structures/array/find-duplicates.md)
     * [Dot Product](data-structures/array/dot-product.md)
-    * [Remove Duplicates from Sorted Array](data-structures/array/remove-duplicates-from-sorted-array.md)
+    * Add Binary
   * [Matrix](data-structures/matrix.md)
   * [Stack](data-structures/stack.md)
     * [Valid Parentheses](data-structures/stack/valid-parentheses.md)
