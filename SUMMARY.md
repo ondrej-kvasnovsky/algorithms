@@ -38,6 +38,7 @@
     * [Two Sum II - Input array is sorted](data-structures/array/two-sum-ii-input-array-is-sorted.md)
     * [Remove Element](data-structures/array/remove-element.md)
     * [Max Consecutive Ones](data-structures/array/max-consecutive-ones.md)
+    * [Minimum Size Subarray Sum](data-structures/array/minimum-size-subarray-sum.md)
   * [Matrix](data-structures/matrix.md)
   * [Stack](data-structures/stack.md)
     * [Valid Parentheses](data-structures/stack/valid-parentheses.md)
