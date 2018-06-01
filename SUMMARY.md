@@ -40,6 +40,7 @@
     * [Max Consecutive Ones](data-structures/array/max-consecutive-ones.md)
     * [Minimum Size Subarray Sum](data-structures/array/minimum-size-subarray-sum.md)
     * [Reverse Words in a String](data-structures/array/reverse-words-in-a-string.md)
+    * [Reverse Words in a String III](data-structures/array/reverse-words-in-a-string-iii.md)
   * [Matrix](data-structures/matrix.md)
   * [Stack](data-structures/stack.md)
     * [Valid Parentheses](data-structures/stack/valid-parentheses.md)
