@@ -1,6 +1,6 @@
 # Remove Duplicates from Sorted Array
 
-Given a sorted array_nums_, remove the duplicates[**in-place**](https://en.wikipedia.org/wiki/In-place_algorithm)such that each element appear only_once_and return the new length.
+Given a sorted array_nums_, remove the duplicates[**in-place**](https://en.wikipedia.org/wiki/In-place_algorithm)such that each element appear only\_once\_and return the new length.
 
 Do not allocate extra space for another array, you must do this by**modifying the input array**[**in-place**](https://en.wikipedia.org/wiki/In-place_algorithm)with O\(1\) extra memory.
 
@@ -43,7 +43,9 @@ for (int i = 0; i < len; i++) {
 }
 ```
 
-Here is a solution. 
+## Solution
+
+Here is a solution.
 
 ```
 class Solution {
