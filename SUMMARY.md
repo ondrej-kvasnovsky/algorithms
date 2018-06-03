@@ -79,6 +79,10 @@
     * [Unique Word Abbreviation](data-structures/map/unique-word-abbreviation.md)
     * [Insert Delete GetRandom O\(1\)](data-structures/map/insert-delete-getrandom-o1.md)
   * [Binary Tree](data-structures/binary-tree.md)
+    * [Binary Tree Preorder Traversal](data-structures/binary-tree/binary-tree-preorder-traversal.md)
+    * [Binary Tree Inorder Traversal](data-structures/binary-tree/binary-tree-inorder-traversal.md)
+    * [Binary Tree Postorder Traversal](data-structures/binary-tree/binary-tree-postorder-traversal.md)
+    * [Binary Tree Level Order Traversal](data-structures/binary-tree/binary-tree-level-order-traversal.md)
   * [Heap](data-structures/heap.md)
   * [Binary Search Tree](data-structures/binary-search-tree.md)
   * Map
