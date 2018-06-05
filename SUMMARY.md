@@ -83,6 +83,9 @@
     * [Binary Tree Inorder Traversal](data-structures/binary-tree/binary-tree-inorder-traversal.md)
     * [Binary Tree Postorder Traversal](data-structures/binary-tree/binary-tree-postorder-traversal.md)
     * [Binary Tree Level Order Traversal](data-structures/binary-tree/binary-tree-level-order-traversal.md)
+    * [Maximum Depth of Binary Tree](data-structures/binary-tree/maximum-depth-of-binary-tree.md)
+    * [Symmetric Tree](data-structures/binary-tree/symmetric-tree.md)
+    * [Path Sum](data-structures/binary-tree/path-sum.md)
   * [Heap](data-structures/heap.md)
   * [Binary Search Tree](data-structures/binary-search-tree.md)
   * Map
