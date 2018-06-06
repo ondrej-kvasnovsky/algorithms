@@ -86,6 +86,7 @@
     * [Maximum Depth of Binary Tree](data-structures/binary-tree/maximum-depth-of-binary-tree.md)
     * [Symmetric Tree](data-structures/binary-tree/symmetric-tree.md)
     * [Path Sum](data-structures/binary-tree/path-sum.md)
+    * [Balanced Binary Tree](data-structures/binary-tree/balanced-binary-tree.md)
   * [Heap](data-structures/heap.md)
   * [Binary Search Tree](data-structures/binary-search-tree.md)
   * Map
