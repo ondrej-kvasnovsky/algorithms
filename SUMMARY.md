@@ -91,6 +91,7 @@
     * [Construct Binary Tree from Inorder and Postorder Traversal](data-structures/binary-tree/construct-binary-tree-from-inorder-and-postorder-traversal.md)
     * [Construct Binary Tree from Preorder and Inorder Traversal](data-structures/binary-tree/construct-binary-tree-from-preorder-and-inorder-traversal.md)
     * [Populating Next Right Pointers in Each Node](data-structures/binary-tree/populating-next-right-pointers-in-each-node.md)
+    * [Lowest Common Ancestor of a Binary Tree](data-structures/binary-tree/lowest-common-ancestor-of-a-binary-tree.md)
   * [Heap](data-structures/heap.md)
   * [Binary Search Tree](data-structures/binary-search-tree.md)
   * Map
