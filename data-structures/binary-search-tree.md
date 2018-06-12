@@ -2,6 +2,10 @@
 
 [Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree) is a data structure to store hierarchical data where each node has only two leaf nodes and nodes are sorted from left to right. BST is also called ordered or sorted binary tree.
 
+A Binary Search Tree is a special form of a binary tree. The value in each node must be greater than \(or equal to\) any values in its left subtree but less than \(or equal to\) any values in its right subtree.
+
+Like a normal binary tree, we can traverse a BST in preorder, inorder, postorder or level-order. However, it is noteworthy that inorder traversal in BST will be in ascending order. Therefore, the inorder traversal is the most frequent used traversal method of a BST.
+
 BST is good for searching in general `O(log n)`. Heaps are the best when we want to get maximum or minimum of set of values, complexity of `O(1)`. More about the difference between [heap and BST](https://cs.stackexchange.com/questions/27860/whats-the-difference-between-a-binary-search-tree-and-a-binary-heap).
 
 The basic algorithm is: when we want to put a value into the tree, we go from the root and we put smaller values on left and higher values on right side.
