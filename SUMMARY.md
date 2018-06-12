@@ -102,6 +102,7 @@
     * [Insert into a Binary Search Tree](data-structures/binary-search-tree/insert-into-a-binary-search-tree.md)
     * [Delete Node in a BST](data-structures/binary-search-tree/delete-node-in-a-bst.md)
     * [Kth Largest Element in a Stream](data-structures/binary-search-tree/kth-largest-element-in-a-stream.md)
+    * [Lowest Common Ancestor of a Binary Search Tree](data-structures/binary-search-tree/lowest-common-ancestor-of-a-binary-search-tree.md)
   * Map
 * [Sequences](sequences.md)
   * [Fibonacci Sequence](sequences/fibonacci-sequence.md)
