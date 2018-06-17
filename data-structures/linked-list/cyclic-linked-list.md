@@ -25,6 +25,8 @@ Lets iterate the list using slow pointer and two fast pointers. Each line means 
 4. slow: d, fast1: c, fast2: d (d == d, so there is a loop, otherwise, it would never get there)
 ```
 
+## Solution
+
 Here is the algorithm.
 
 ```
@@ -128,6 +130,37 @@ class Node<T> {
     @Override
     public String toString() {
         return value.toString();
+    }
+}
+```
+
+Here is another alternative solution. 
+
+```
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        if (head == null) return false;
+        ListNode slow = head;
+        ListNode fast = head.next;
+        while(slow != fast) {
+            if (fast == null || fast.next == null) {
+                return false;
+            }
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return true;
     }
 }
 ```

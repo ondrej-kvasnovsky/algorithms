@@ -1,8 +1,8 @@
 # Find Nth Element from End
 
-We want to find Nth element from the end in a linked list in one pass. 
+We want to find Nth element from the end in a linked list in one pass.
 
-Lets create counter that will count what element we are reading. Then we create to pointers. The first pointer will be normal pointer that iterates through all the elements in the array. The second pointer will be a slow pointer and will be set after we have read N elements from the linked list. After the index is higher than N, we can update the slow pointer every iterations. 
+Lets create counter that will count what element we are reading. Then we create to pointers. The first pointer will be normal pointer that iterates through all the elements in the array. The second pointer will be a slow pointer and will be set after we have read N elements from the linked list. After the index is higher than N, we can update the slow pointer every iterations.
 
 ```
 public class Demo {
