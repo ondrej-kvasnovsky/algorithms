@@ -50,6 +50,7 @@
   * [Queue](data-structures/queue.md)
   * [Linked List](data-structures/linked-list.md)
     * [Design Linked List](data-structures/linked-list/design-linked-list.md)
+    * [Design Doubly Linked List](data-structures/linked-list/design-doubly-linked-list.md)
     * [Find Middle Element](data-structures/linked-list/find-middle-element.md)
     * [Doubly Linked List](data-structures/linked-list/doubly-linked-list.md)
     * [Cyclic Linked List](data-structures/linked-list/cyclic-linked-list.md)
@@ -62,7 +63,8 @@
     * [Reverse Linked List](data-structures/linked-list/reverse-linked-list.md)
     * [Remove Linked List Elements](data-structures/linked-list/remove-linked-list-elements.md)
     * [Odd Even Linked List](data-structures/linked-list/odd-even-linked-list.md)
-    * [Palindrome Linked List](data-structures/linked-list/palindrome-linked-list.md)
+    * Design Doubly Linked List
+    * [Flatten a Multilevel Doubly Linked List](data-structures/linked-list/flatten-a-multilevel-doubly-linked-list.md)
   * [Set](data-structures/hash-table.md)
     * [Intersection of Two Arrays](data-structures/hash-table/intersection-of-two-arrays.md)
     * [Single Number](data-structures/hash-table/single-number.md)
