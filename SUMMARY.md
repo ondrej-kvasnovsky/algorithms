@@ -65,6 +65,9 @@
     * [Odd Even Linked List](data-structures/linked-list/odd-even-linked-list.md)
     * Design Doubly Linked List
     * [Flatten a Multilevel Doubly Linked List](data-structures/linked-list/flatten-a-multilevel-doubly-linked-list.md)
+    * [Rotate List](data-structures/linked-list/rotate-list.md)
+    * [Copy List with Random Pointer](data-structures/linked-list/copy-list-with-random-pointer.md)
+    * [Insert into a Cyclic Sorted List](data-structures/linked-list/insert-into-a-cyclic-sorted-list.md)
   * [Set](data-structures/hash-table.md)
     * [Intersection of Two Arrays](data-structures/hash-table/intersection-of-two-arrays.md)
     * [Single Number](data-structures/hash-table/single-number.md)
