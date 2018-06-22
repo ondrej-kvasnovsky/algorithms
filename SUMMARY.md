@@ -121,6 +121,11 @@
       * [Balanced Binary Tree](data-structures/binary-search-tree/height-balanced-bst/balanced-binary-tree.md)
       * [Convert Sorted Array to Binary Search Tree](data-structures/binary-search-tree/height-balanced-bst/convert-sorted-array-to-binary-search-tree.md)
   * Map
+  * [N-ary Tree](data-structures/n-ary-tree.md)
+    * [N-ary Tree Preorder Traversal](data-structures/n-ary-tree/n-ary-tree-preorder-traversal.md)
+    * [N-ary Tree Postorder Traversal](data-structures/n-ary-tree/n-ary-tree-postorder-traversal.md)
+    * [N-ary Tree Level Order Traversal](data-structures/n-ary-tree/n-ary-tree-level-order-traversal.md)
+    * [Maximum Depth of N-ary Tree](data-structures/n-ary-tree/maximum-depth-of-n-ary-tree.md)
 * [Sequences](sequences.md)
   * [Fibonacci Sequence](sequences/fibonacci-sequence.md)
 * [Dynamic Programming](dynamic-programmimg.md)
