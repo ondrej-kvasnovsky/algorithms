@@ -30,6 +30,8 @@ We should return the following flattened doubly linked list:
 
 ## Solution
 
+Solution is inspired by this article [here](https://mikkqu.com/flatten-a-multilevel-doubly-linked-list/). The idea is to change pointers so it "inserts" child into parent and parent.next.![](/assets/import.png)
+
 ```
 /*
 // Definition for a Node.
@@ -51,9 +53,27 @@ class Node {
 */
 class Solution {
     public Node flatten(Node head) {
-        // read nodes from head
-        // if child is present, remember where we started reading (put it into stack), and start reading child, repeat this until stack is empty (when done reading, try to get from stack)
-        
+        Node parent = head;
+        while (parent != null) {
+            Node child = parent.child;
+            if (child != null) {
+                Node lastChild = child;
+                while (lastChild.next != null) { // find last child
+                    lastChild = lastChild.next;
+                }
+                if (parent.next != null) { // if parent has next, set child as previous of the next one
+                    // if parent.next is null, it can't reference back
+                    parent.next.prev = lastChild;
+                }
+                // make links (insert child into parent)
+                parent.child.prev = parent; 
+                lastChild.next = parent.next;
+                parent.next = parent.child;
+                parent.child = null;
+            }
+            parent = parent.next;
+        }
+        return head;
     }
 }
 ```
