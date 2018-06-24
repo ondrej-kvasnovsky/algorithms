@@ -126,6 +126,8 @@
     * [N-ary Tree Postorder Traversal](data-structures/n-ary-tree/n-ary-tree-postorder-traversal.md)
     * [N-ary Tree Level Order Traversal](data-structures/n-ary-tree/n-ary-tree-level-order-traversal.md)
     * [Maximum Depth of N-ary Tree](data-structures/n-ary-tree/maximum-depth-of-n-ary-tree.md)
+    * [Encode N-ary Tree to Binary Tree](data-structures/n-ary-tree/encode-n-ary-tree-to-binary-tree.md)
+    * [Serialize and Deserialize N-ary Tree](data-structures/n-ary-tree/serialize-and-deserialize-n-ary-tree.md)
 * [Sequences](sequences.md)
   * [Fibonacci Sequence](sequences/fibonacci-sequence.md)
 * [Dynamic Programming](dynamic-programmimg.md)
