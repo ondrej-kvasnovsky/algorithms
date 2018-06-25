@@ -50,6 +50,67 @@ public class BinarySearch {
 }
 ```
 
+### Another ways to implement binary search
+
+It is used to search for an element or condition which requires accessing the current index and its immediate right neighbor's index in the array.
+
+```
+int binarySearch(int[] nums, int target){
+  if(nums == null || nums.length == 0)
+    return -1;
+
+  int left = 0;
+  int right = nums.length;
+  while (left < right) {
+    // Prevent (left + right) overflow
+    int mid = left + (right - left) / 2;
+    if (nums[mid] == target) { 
+        return mid; 
+    }
+    else if(nums[mid] < target) { 
+        left = mid + 1; 
+    } else { 
+        right = mid; 
+    }
+  }
+
+  // Post-processing:
+  // End Condition: left == right
+  if (left != nums.length && nums[left] == target) {
+      return left;
+  }
+  return -1;
+}
+```
+
+This is used when requires accessing the current index and its immediate left and right neighbor's index in the array.
+
+```
+int binarySearch(int[] nums, int target) {
+    if (nums == null || nums.length == 0)
+        return -1;
+
+    int left = 0, right = nums.length - 1;
+    while (left + 1 < right){
+        // Prevent (left + right) overflow
+        int mid = left + (right - left) / 2;
+        if (nums[mid] == target) {
+            return mid;
+        } else if (nums[mid] < target) {
+            left = mid;
+        } else {
+            right = mid;
+        }
+    }
+
+    // Post-processing:
+    // End Condition: left + 1 == right
+    if(nums[left] == target) return left;
+    if(nums[right] == target) return right;
+    return -1;
+}
+```
+
 ### 3SUM problem with Binary Search
 
 We use binary search for finding `k` index of a value that is opposite to what is at position `i` and `j`. So we calculate `-arr[i] - arr[j]` and then we search for this value in the array. That means `-arr[i] - arr[i] + arr[k]` is equal to `0`.
