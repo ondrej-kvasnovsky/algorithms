@@ -21,6 +21,8 @@
     * [Find Peak Element](binary-search/find-peak-element.md)
     * [Find Minimum in Rotated Sorted Array](binary-search/find-minimum-in-rotated-sorted-array.md)
     * [Search for a Range](binary-search/search-for-a-range.md)
+    * [Closest Binary Search Tree Value](binary-search/closest-binary-search-tree-value.md)
+    * [Find K Closest Elements](binary-search/find-k-closest-elements.md)
   * [Find Sum in Array](find-sum-in-array.md)
   * [Longest Common Prefix](longest-common-prefix.md)
 * [Sorting](sorting.md)

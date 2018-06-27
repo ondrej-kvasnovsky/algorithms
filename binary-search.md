@@ -1,5 +1,11 @@
 ### Binary Search
 
+99% of binary search problems that you see online will fall into 1 of these 3 templates.
+
+**Note:**The templates and their differences have been colored coded below.
+
+![](https://leetcode.com/explore/learn/card/binary-search/135/template-iii/Figures/binary_search/Template_Diagram.png)
+
 If we have sorted array, we can perform binary search. We go into the middle of array, if equal, we found it, if smaller, go left, if bigger go right.
 
 ```
