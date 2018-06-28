@@ -23,6 +23,7 @@
     * [Search for a Range](binary-search/search-for-a-range.md)
     * [Closest Binary Search Tree Value](binary-search/closest-binary-search-tree-value.md)
     * [Find K Closest Elements](binary-search/find-k-closest-elements.md)
+    * [Search in a Sorted Array of Unknown Size](binary-search/search-in-a-sorted-array-of-unknown-size.md)
   * [Find Sum in Array](find-sum-in-array.md)
   * [Longest Common Prefix](longest-common-prefix.md)
 * [Sorting](sorting.md)
