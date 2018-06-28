@@ -125,6 +125,8 @@
     * [Populating Next Right Pointers in Each Node](data-structures/binary-tree/populating-next-right-pointers-in-each-node.md)
     * [Lowest Common Ancestor of a Binary Tree](data-structures/binary-tree/lowest-common-ancestor-of-a-binary-tree.md)
     * [Serialize and Deserialize Binary Tree](data-structures/binary-tree/serialize-and-deserialize-binary-tree-go-to-discuss.md)
+    * [Median of Two Sorted Arrays](data-structures/binary-tree/median-of-two-sorted-arrays.md)
+    * [Invert Binary Tree](data-structures/binary-tree/invert-binary-tree.md)
   * [Heap](data-structures/heap.md)
   * [Binary Search Tree](data-structures/binary-search-tree.md)
     * [Validate Binary Search Tree](data-structures/binary-search-tree/validate-binary-search-tree.md)
