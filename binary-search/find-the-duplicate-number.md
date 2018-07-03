@@ -20,14 +20,14 @@ Output: 3
 
 1. You **must not **modify the array \(assume the array is read only\).
 2. You must use only constant, O\(1\) extra space.
-3. Your runtime complexity should be less than _O_\(_n_2\).
+3. Your runtime complexity should be less than _O_\(\_n\_2\).
 4. There is only one duplicate number in the array, but it could be repeated more than once.
 
 ## Solution
 
 #### Note {#note}
 
-The first two approaches mentioned do not satisfy the constraints given in the prompt, but they are solutions that you might be likely to come up with during a technical interview. As an interviewer, I personally would_not_expect someone to come up with the cycle detection solution unless they have heard it before.
+The first two approaches mentioned do not satisfy the constraints given in the prompt, but they are solutions that you might be likely to come up with during a technical interview. As an interviewer, I personally would\_not\_expect someone to come up with the cycle detection solution unless they have heard it before.
 
 #### Proof {#proof}
 
@@ -112,11 +112,11 @@ class Solution {
 
 **Intuition**
 
-If we interpret`nums`such that for each pair of indexiiand valueviv​i​​, the "next" valuevjv​j​​is at indexviv​i​​, we can reduce this problem to cycle detection. See the solution to[Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/solution/)for more details.
+If we interpret`nums`such that for each pair of index ii and value vi v​i​​, the "next" valuevjv​j​​is at indexviv​i​​, we can reduce this problem to cycle detection. See the solution to [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/solution/) for more details.
 
 **Algorithm**
 
-First off, we can easily show that the constraints of the problem imply that a cycle_must_exist. Because each number in`nums`is between11andnn, it will necessarily point to an index that exists. Therefore, the list can be traversed infinitely, which implies that there is a cycle. Additionally, because00cannot appear as a value in`nums`,`nums[0]`cannot be part of the cycle. Therefore, traversing the array in this manner from`nums[0]`is equivalent to traversing a cyclic linked list. Given this, the problem can be solved just like[Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/).
+First off, we can easily show that the constraints of the problem imply that a cycle\_must\_exist. Because each number in`nums`is between11andnn, it will necessarily point to an index that exists. Therefore, the list can be traversed infinitely, which implies that there is a cycle. Additionally, because 00 cannot appear as a value in`nums`,`nums[0]`cannot be part of the cycle. Therefore, traversing the array in this manner from`nums[0]`is equivalent to traversing a cyclic linked list. Given this, the problem can be solved just like [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/).
 
 To see the algorithm in action, check out the animation below:
 
