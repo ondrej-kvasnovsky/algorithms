@@ -2,7 +2,7 @@
 
 Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
 
-**Note:** A leaf is a node with no children.
+**Note:** A leaf is a node with no children.
 
 **Example:**
 
@@ -36,7 +36,7 @@ class Solution {
     public boolean hasPathSum(TreeNode root, int sum) {
         return sum(root, 0, sum);
     }
-    
+
     private boolean sum(TreeNode node, int current, int sum) {
         if (node == null) {
             return false;
@@ -56,6 +56,45 @@ class Solution {
         }
         return false;
     }
+}
+```
+
+Other recursive solution. 
+
+```
+public boolean hasPathSum(TreeNode root, int sum) {
+    if (root == null) return false;
+    if (root.left == null && root.right == null && root.val == sum) return true;
+    return hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);
+}
+```
+
+Iterative solution. 
+
+```
+public boolean hasPathSum(TreeNode root, int sum) {
+    // iteration method
+    if (root == null) {return false;}
+    Stack<TreeNode> path = new Stack<>();
+    Stack<Integer> sub = new Stack<>();
+    path.push(root);
+    sub.push(root.val);
+    while (!path.isEmpty()) {
+        TreeNode temp = path.pop();
+        int tempVal = sub.pop();
+        if (temp.left == null && temp.right == null) {if (tempVal == sum) return true;}
+        else {
+            if (temp.left != null) {
+                path.push(temp.left);
+                sub.push(temp.left.val + tempVal);
+            }
+            if (temp.right != null) {
+                path.push(temp.right);
+                sub.push(temp.right.val + tempVal);
+            }
+        }
+    }
+    return false;
 }
 ```
 

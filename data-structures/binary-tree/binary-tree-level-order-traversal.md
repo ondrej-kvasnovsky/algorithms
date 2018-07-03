@@ -25,6 +25,8 @@ return its level order traversal as:
 
 ## Solution
 
+Recursive solution.
+
 ```
 /**
  * Definition for a binary tree node.
@@ -42,7 +44,7 @@ class Solution {
         traverse(root, result, 0);
         return result;
     }
-    
+
     public void traverse(TreeNode node, List<List<Integer>> list, int level) {
         if (node == null) return;
         if (level == list.size()) {
@@ -55,7 +57,7 @@ class Solution {
 }
 ```
 
-Non recursive solution. 
+Non recursive solution.
 
 ```
 /**
