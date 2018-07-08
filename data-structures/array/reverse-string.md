@@ -26,5 +26,25 @@ class Solution {
 }
 ```
 
+Or it could be done without creation of a new array. 
+
+```
+class Solution {
+    public String reverseString(String s) {
+        int start = 0;
+        int end = s.length() - 1;
+        char[] chars = s.toCharArray();
+        while (start <= end) {
+            char temp = chars[start];
+            chars[start] = chars[end];
+            chars[end] = temp;
+            start++;
+            end--;
+        }
+        return new String(chars);
+    }
+}
+```
+
 
 

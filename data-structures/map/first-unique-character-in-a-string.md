@@ -14,6 +14,10 @@ return 2.
 
 **Note: **You may assume the string contain only lowercase letters.
 
+## Solution
+
+We can first make counts of each letter and then when we find count 1 for a letter, we know we found the first non repeating character.
+
 ```
 class Solution {
     public int firstUniqChar(String s) {
@@ -25,7 +29,7 @@ class Solution {
             Integer value = map.getOrDefault(c, 0);
             map.put(c, value + 1);
         }
-        
+
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             Integer value = map.get(c);
@@ -33,7 +37,7 @@ class Solution {
                 return i;
             }
         }
-        
+
         return -1;
     }
 }
