@@ -1,6 +1,6 @@
 # Rotate Array
 
-Given an array, rotate the array to the right by_k_steps, where _k_ is non-negative.
+Given an array, rotate the array to the right by_k\_steps, where \_k_ is non-negative.
 
 **Example 1:**
 
@@ -30,7 +30,7 @@ rotate 2 steps to the right: [3,99,-1,-100]
 
 ## Solution
 
-First idea was to create something what would just switch the halfs \(half is defined by K\). 
+First idea was to create something what would just switch the halfs \(half is defined by K\).
 
 ```
 class Solution {
@@ -56,7 +56,7 @@ class Solution {
 }
 ```
 
-But it does not work for K which is bigger than length of nums. So it cannot rotate array couple of times. The issue is that it takes too much time to copy all values for each K. 
+But it does not work for K which is bigger than length of nums. So it cannot rotate array couple of times. The issue is that it takes too much time to copy all values for each K.
 
 ```
 class Solution {
@@ -83,11 +83,13 @@ After reversing first k numbers : 5 6 7 4 3 2 1
 After revering last n-k numbers : 5 6 7 1 2 3 4 --> Result
 ```
 
-Here is the implementation. 
+Here is the implementation.
 
 ```
 class Solution {
     public void rotate(int[] nums, int k) {
+        k = k % nums.length;
+
         swap(nums, 0, nums.length - 1);
         swap(nums, 0, k - 1);
         swap(nums, k, nums.length - 1);
@@ -104,8 +106,6 @@ class Solution {
     }
 }
 ```
-
-
 
 
 

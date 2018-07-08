@@ -1,6 +1,6 @@
 # Plus One
 
-Given a**non-empty**array of digits representing a non-negative integer, plus one to the integer.
+Given a **non-empty **array of digits representing a non-negative integer, plus one to the integer.
 
 The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.
 
@@ -47,20 +47,20 @@ class Solution {
             System.arraycopy(digits, 0, newArray, 1, digits.length);
             return newArray;
         }
-        
+
         return digits;
     }
 }
 ```
 
-Or we can create the new array and put it all there from the beginning. 
+Or we can create the new array and put it all there from the beginning.
 
 ```
 class Solution {
     public int[] plusOne(int[] digits) {
         // [1] = [2]
         // [1, 1] = [1, 2] -> take increase number on last position, if i tis higher than 10, then substract 10 and put remaining to some temp variable, then do the other iteration only if remaining is not 0
-       
+
         // increment last value by one
         // iterate through array from end
         // init carry = 0
@@ -68,9 +68,9 @@ class Solution {
         // increment the last value
         // if >= 10 -> carry = 1 and value - 10, add value to stack
         // else add value to stack
-        
+
         // take items from stack and put them into new array of stack size
-        
+
         int[] result = new int[digits.length + 1];
         digits[digits.length - 1]++;
         int carry = 0;

@@ -5,7 +5,7 @@ Given two arrays, write a function to compute their intersection.
 **Example:**  
 Given: nums1=`[1, 2, 2, 1]`, nums2=`[2, 2]`,  return`[2, 2]`.
 
-And another example: 
+And another example:
 
 ```
 nums1 = [1, 2, 2, 1, 3, 1]
@@ -24,7 +24,9 @@ returns [2, 2, 1, 3]
 * What if nums1's size is small compared to nums2's size? Which algorithm is better?
 * What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?
 
-Here is a solution. 
+## Solution
+
+Here is a solution.
 
 ```
 class Solution {
@@ -41,14 +43,14 @@ class Solution {
             bigger = nums2;
             smaller = nums1;
         }
-        
+
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < bigger.length; i++) {
             int number = bigger[i];
             int count = map.getOrDefault(number, 0);
             map.put(number, count + 1);
         }
-        
+
         List<Integer> result = new ArrayList<>();
         for (int i = 0; i < smaller.length; i++) {
             int number = smaller[i];
@@ -60,7 +62,7 @@ class Solution {
                 }
             }
         }
-        
+
         int[] r = result.stream().mapToInt(Integer::intValue).toArray();
         return r;
     }

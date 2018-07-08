@@ -56,7 +56,7 @@ Explanation: Same as Example 1, except with the 5 in the top left corner being
 * The given board contain only digits`1-9`and the character`'.'`.
 * The given board size is always`9x9`.
 
-Here is a solution. First we check rows, then columns and then squares. This is some kind of hard core solution. 
+Here is a solution. First we check rows, then columns and then squares. This is some kind of hard core solution.
 
 ```
 class Solution {
@@ -122,7 +122,7 @@ class Solution {
 }
 ```
 
-Other solution is to use hash map and check what element we have seen for each case \(row, column and square\). We would like to generate unique string for each item on the row, in the column and in the square. 
+Other solution \(the better one\) is to use hash map and check what element we have seen for each case \(row, column and square\). We would like to generate unique string for each item on the row, in the column and in the square.
 
 ```
 5 in row 0
@@ -242,10 +242,20 @@ class Solution {
                 }
             }
         }
-        
+
         return true;
     }
 }
+```
+
+Here is a piece of output what this algorithm produces. 
+
+```
+[5 in column 0, 5 in row 0, 5 in square 0-0]
+[5 in column 0, 3 in row 0, 3 in column 1, 3 in square 0-0, 5 in row 0, 5 in square 0-0]
+[5 in column 0, 7 in column 4, 3 in row 0, 3 in column 1, 3 in square 0-0, 7 in square 0-1, 5 in row 0, 7 in row 0, 5 in square 0-0]
+[5 in column 0, 7 in column 4, 6 in row 1, 3 in row 0, 3 in column 1, 3 in square 0-0, 7 in square 0-1, 5 in row 0, 7 in row 0, 6 in square 0-0, 6 in column 0, 5 in square 0-0]
+...
 ```
 
 

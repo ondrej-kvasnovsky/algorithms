@@ -1,8 +1,8 @@
 # Fibonacci Sequence
 
-Fibonacci sequence starts from 1. It is 1 1 2 3 5 8 11... and so on. 
+Fibonacci sequence starts from 1. It is 1 1 2 3 5 8 11... and so on.
 
-Lets see how to get fibonacci sequence using while loop and recursion. 
+Lets see how to get fibonacci sequence using while loop and recursion.
 
 ```
 public class Demo {
@@ -44,6 +44,28 @@ public class Demo {
         return fibRecursion(nth - 1) + fibRecursion(nth -2);
     }
 }
+```
+
+We can see that many calculations are repeated. We could memoize the results in order to speed up the algorithm. 
+
+```
+                      F(5)  
+                    /      \                  
+                   /        \
+                  /          \
+               F(4)          F(3)
+            /       \        /   \
+          F(3)     F(2)     F(2)  F(1)
+         /   \     /  \     /   \
+       F(2) F(1) F(1) F(0) F(1) F(0)
+       /  \
+     F(1) F(0)
+```
+
+This is how it could be done. 
+
+```
+
 ```
 
 

@@ -63,6 +63,9 @@
     * [Remove Duplicates from Sorted Array](data-structures/array/remove-duplicates-from-sorted-array.md)
     * [Move Zeroes](data-structures/array/move-zeroes.md)
     * [Rotate Array](data-structures/array/rotate-array.md)
+    * [Rotate Image](data-structures/array/rotate-image.md)
+    * [Best Time to Buy and Sell Stock](data-structures/array/best-time-to-buy-and-sell-stock.md)
+    * [Best Time to Buy and Sell Stock II](data-structures/array/best-time-to-buy-and-sell-stock-ii.md)
   * [Matrix](data-structures/matrix.md)
   * [Stack](data-structures/stack.md)
     * [Valid Parentheses](data-structures/stack/valid-parentheses.md)
@@ -95,6 +98,7 @@
     * [Jewels and Stones](data-structures/hash-table/jewels-and-stones.md)
     * [Longest Substring Without Repeating Characters](data-structures/hash-table/longest-substring-without-repeating-characters.md)
     * [Two Sum III - Data structure design](data-structures/hash-table/two-sum-iii-data-structure-design.md)
+    * Valid Sudoku
   * [Map](data-structures/map.md)
     * [Two Sum](data-structures/map/two-sum.md)
     * [Isomorphic Strings](data-structures/map/isomorphic-strings.md)
