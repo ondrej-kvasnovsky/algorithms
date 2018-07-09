@@ -1,6 +1,6 @@
 # Best Time to Buy and Sell Stock
 
-Say you have an array for which the _i-_th element is the price of a given stock on day _i_.
+Say you have an array for which the _i-\_th element is the price of a given stock on day \_i_.
 
 If you were only permitted to complete at most one transaction \(i.e., buy one and sell one share of the stock\), design an algorithm to find the maximum profit.
 
@@ -25,7 +25,7 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 
 ## Solution
 
-We are looking for lowest price and then for the highest profit. 
+We are looking for lowest price and then for the highest profit.
 
 ```
 class Solution {
@@ -38,17 +38,17 @@ class Solution {
         //         max = Math.max(max, prices[j] - prices[i]);
         //     }
         // }
-        
+
         // O(n) [7,1,5,3,6,4]
         if (prices.length == 0) return 0;
-        
+
         int min = prices[0];
         int maxProfit = 0;
         for (int i = 1; i < prices.length; i++) {
             min = Math.min(min, prices[i]);
             maxProfit = Math.max(maxProfit, prices[i] - min);
         }
-        
+
         return maxProfit;
     }
 }
@@ -72,7 +72,7 @@ public class Solution {
 }
 ```
 
-Here is another alternative, probably more intuitive and simplier. 
+Here is another alternative, probably more intuitive and simplier.
 
 ```
 class Solution {
@@ -93,7 +93,7 @@ class Solution {
 }
 ```
 
-Here is the output. 
+Here is the output.
 
 ```
 min: 7, max: 0
@@ -103,5 +103,5 @@ min: 1, max: 4
 min: 1, max: 5
 ```
 
-
+More info from other [source](http://hanslen.me/2017/10/15/Best-Time-to-Buy-and-Sell-Stock-series-with-Dynamic-Programming-in-Java/). 
 
