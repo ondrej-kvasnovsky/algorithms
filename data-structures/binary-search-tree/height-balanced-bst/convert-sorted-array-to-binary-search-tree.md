@@ -2,7 +2,7 @@
 
 Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
 
-For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of_every_node never differ by more than 1.
+For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of\_every\_node never differ by more than 1.
 
 **Example:**
 
@@ -20,7 +20,7 @@ One possible answer is: [0,-3,9,-10,null,5], which represents the following heig
 
 ## Solution
 
-Start in the middle and add the other nodes recursively to left and right \(depending on what we read from the middle\).
+Start in the middle and add the other nodes recursively to left and right \(depending on what we read from the middle\). Stop when left starts to be bigger than right \(length of the array minus one\).
 
 ```
 /**
@@ -36,16 +36,16 @@ class Solution {
     public TreeNode sortedArrayToBST(int[] nums) {
         return createTree(nums, 0, nums.length - 1);
     }
-    
+
     private TreeNode createTree(int[] nums, int left, int right) {
         if (left > right) return null;
-        
+
         int mid = (left + right + 1) / 2;
         TreeNode node = new TreeNode(nums[mid]);
-        
+
         node.left = createTree(nums, left, mid - 1);
         node.right = createTree(nums, mid + 1, right);
-        
+
         return node;
     }
 }

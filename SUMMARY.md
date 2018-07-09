@@ -70,6 +70,7 @@
     * [3Sum](data-structures/array/3sum.md)
     * [String to Integer \(atoi\)](data-structures/array/string-to-integer-atoi.md)
     * [Count and Say](data-structures/array/count-and-say.md)
+    * [Merge Sorted Array](data-structures/array/merge-sorted-array.md)
   * [Matrix](data-structures/matrix.md)
   * [Stack](data-structures/stack.md)
     * [Valid Parentheses](data-structures/stack/valid-parentheses.md)
@@ -176,4 +177,7 @@
   * [Fibonacci Sequence](sequences/fibonacci-sequence.md)
 * [Dynamic Programming](dynamic-programmimg.md)
   * [Knapsack problem](dynamic-programming/knapsack-problem.md)
+  * [Climbing Stairs](dynamic-programming/climbing-stairs.md)
+  * [Best Time to Buy and Sell Stock](dynamic-programming/best-time-to-buy-and-sell-stock.md)
+  * [Maximum Subarray](dynamic-programming/maximum-subarray.md)
 
