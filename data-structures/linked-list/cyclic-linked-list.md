@@ -134,7 +134,7 @@ class Node<T> {
 }
 ```
 
-Here is another alternative solution. 
+Here is another alternative solution.
 
 ```
 /**
@@ -150,6 +150,7 @@ Here is another alternative solution.
  */
 public class Solution {
     public boolean hasCycle(ListNode head) {
+    // 1 -> 2 -> 3 -> 1 (s: 1 f: 2) -> s: 2, f: 1 -> s: 3, f: 3
         if (head == null) return false;
         ListNode slow = head;
         ListNode fast = head.next;
