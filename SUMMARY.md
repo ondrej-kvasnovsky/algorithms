@@ -180,4 +180,5 @@
   * [Climbing Stairs](dynamic-programming/climbing-stairs.md)
   * [Best Time to Buy and Sell Stock](dynamic-programming/best-time-to-buy-and-sell-stock.md)
   * [Maximum Subarray](dynamic-programming/maximum-subarray.md)
+  * [House Robber](house-robber.md)
 
