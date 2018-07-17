@@ -71,6 +71,7 @@
     * [String to Integer \(atoi\)](data-structures/array/string-to-integer-atoi.md)
     * [Count and Say](data-structures/array/count-and-say.md)
     * [Merge Sorted Array](data-structures/array/merge-sorted-array.md)
+    * [Shuffle an Array](data-structures/array/shuffle-an-array.md)
   * [Matrix](data-structures/matrix.md)
   * [Stack](data-structures/stack.md)
     * [Valid Parentheses](data-structures/stack/valid-parentheses.md)
