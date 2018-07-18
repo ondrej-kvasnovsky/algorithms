@@ -75,6 +75,7 @@
   * [Matrix](data-structures/matrix.md)
   * [Stack](data-structures/stack.md)
     * [Valid Parentheses](data-structures/stack/valid-parentheses.md)
+    * [Min Stack](data-structures/stack/min-stack.md)
   * [Queue](data-structures/queue.md)
   * [Linked List](data-structures/linked-list.md)
     * [Design Linked List](data-structures/linked-list/design-linked-list.md)
