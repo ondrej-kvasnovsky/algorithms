@@ -248,7 +248,7 @@ class Solution {
 }
 ```
 
-Here is a piece of output what this algorithm produces. 
+Here is a piece of output what this algorithm produces.
 
 ```
 [5 in column 0, 5 in row 0, 5 in square 0-0]

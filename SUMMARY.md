@@ -107,7 +107,8 @@
     * [Jewels and Stones](data-structures/hash-table/jewels-and-stones.md)
     * [Longest Substring Without Repeating Characters](data-structures/hash-table/longest-substring-without-repeating-characters.md)
     * [Two Sum III - Data structure design](data-structures/hash-table/two-sum-iii-data-structure-design.md)
-    * Valid Sudoku
+    * [Valid Sudoku](data-structures/map/valid-sudoku.md)
+    * [Missing Number](data-structures/hash-table/missing-number.md)
   * [Map](data-structures/map.md)
     * [Two Sum](data-structures/map/two-sum.md)
     * [Isomorphic Strings](data-structures/map/isomorphic-strings.md)
@@ -117,7 +118,6 @@
     * [Logger Rate Limiter](data-structures/map/logger-rate-limiter.md)
     * [Group Anagrams](data-structures/map/group-anagrams.md)
     * [Group Shifted Strings](data-structures/map/group-shifted-strings.md)
-    * [Valid Sudoku](data-structures/map/valid-sudoku.md)
     * [Find Duplicate Subtrees](data-structures/map/find-duplicate-subtrees.md)
     * [4Sum II](data-structures/hash-table/4sum-ii.md)
     * [Top K Frequent Elements](data-structures/map/top-k-frequent-elements.md)
