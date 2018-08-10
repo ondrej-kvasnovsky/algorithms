@@ -45,7 +45,7 @@ class Solution {
 
         return isNegative ? -reversed : reversed;
     }
-} 
+}
 ```
 
 
