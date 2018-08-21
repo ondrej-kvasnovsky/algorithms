@@ -1,6 +1,6 @@
 # Bubble Sort
 
-Complexity: `O(n^2)`. 
+Complexity: `O(n^2)`.
 
 ```
 import java.util.Arrays;
@@ -32,6 +32,49 @@ public class Demo {
         System.out.println(Arrays.toString(array));
     }
 }
+```
+
+Once I was asked to implement whatever sorting algorithm \(on a phone interview\). I came up with this algorithm to sort an array. It is some kind of version of bubble sort, I guess. 
+
+```
+package algorithms.doordash;
+
+import java.util.Arrays;
+
+public class Phone1 {
+
+    public static void main(String[] args) {
+        int[] array = {41, 3, 2, 21, 3, 21, 1, -100, 0, 1000};
+        sort(array);
+        System.out.println(Arrays.toString(array));
+    }
+
+    private static void sort(int[] array) {
+        int length = array.length - 1;
+        int minVal = Integer.MIN_VALUE;
+        for (int i = 0; i < length; ) {
+            int index1 = i;
+            int index2 = i + 1;
+            while (index2 < length + 1) {
+                minVal = Math.min(array[index1], array[index2]);
+                if (array[index1] > array[index2]) {
+                    swap(index1, index2, array);
+                }
+                index2++;
+            }
+            if (minVal <= array[index1]) {
+                i++;
+            }
+        }
+    }
+
+    public static void swap(int index1, int index2, int[] array) {
+        int temp = array[index2];
+        array[index2] = array[index1];
+        array[index1] = temp;
+    }
+}
+
 ```
 
 
