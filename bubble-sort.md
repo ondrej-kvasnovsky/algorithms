@@ -34,7 +34,7 @@ public class Demo {
 }
 ```
 
-Once I was asked to implement whatever sorting algorithm \(on a phone interview\). I came up with this algorithm to sort an array. It is some kind of version of bubble sort, I guess. 
+Once I was asked to implement whatever sorting algorithm \(on a phone interview\). I came up with this algorithm to sort an array. It is some kind of version of bubble sort, I guess.
 
 ```
 package algorithms.doordash;
@@ -74,7 +74,6 @@ public class Phone1 {
         array[index1] = temp;
     }
 }
-
 ```
 
 
