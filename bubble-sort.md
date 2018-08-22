@@ -2,6 +2,31 @@
 
 Complexity: `O(n^2)`.
 
+Very basic implementation. 
+
+```
+public class BubbleSort2 {
+
+    public static void main(String[] args) {
+        int[] array = {5, 4, 3, 100, 1};
+
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length; j++) {
+                if (array[i] < array[j]) {
+                    int temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+
+        System.out.println(Arrays.toString(array));
+    }
+}
+```
+
+Another implementation where we limit ending boundaries.
+
 ```
 import java.util.Arrays;
 
@@ -34,7 +59,7 @@ public class Demo {
 }
 ```
 
-Once I was asked to implement whatever sorting algorithm \(on a phone interview\). I came up with this algorithm to sort an array. It is some kind of version of bubble sort, I guess.
+Once I was asked to implement whatever sorting algorithm \(on a phone interview\). I came up with this algorithm to sort an array. It is some kind of version of bubble sort, I guess. I am not sure why I did that, I think pressure and stress really worked out.
 
 ```
 package algorithms.doordash;
