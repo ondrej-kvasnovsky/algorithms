@@ -24,7 +24,7 @@ public class MergeSort3 {
 
     public static void main(String[] args) {
         int[] sortedArray = {4, 5, 1, 2};
-        mergeSortedArrays(sortedArray, 0, sortedArray.length / 2, sortedArray.length - 1);
+        mergeAndSortArrays(sortedArray, 0, sortedArray.length / 2, sortedArray.length - 1);
         System.out.println(Arrays.toString(sortedArray));
 
         int[] array = {5, 4, 3, 2, 1, 100, -1};
@@ -41,7 +41,7 @@ public class MergeSort3 {
         }
     }
 
-    static void mergeSortedArrays(int[] array, int left, int middle, int right) {
+    static void mergeAndSortArrays(int[] array, int left, int middle, int right) {
         int[] temp = new int[array.length];
 
         int index = left;
@@ -64,7 +64,7 @@ public class MergeSort3 {
             index++;
             index1++;
         }
-        while (index2 < right) {
+        while (index2 <= right) {
             temp[index] = array[index2];
             index++;
             index2++;
@@ -124,7 +124,7 @@ class MergerSort2 {
 }
 ```
 
-Here is another implementation. I have put it here just as a reference, but I don't like it. 
+Here is another implementation. I have put it here just as a reference, but I don't like it.
 
 ```
 class MergeSort1 {
