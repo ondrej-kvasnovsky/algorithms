@@ -13,7 +13,7 @@ Complexity: O\(n log n\)
 
 ## Solution
 
-Here is a solution I was able to develop. It could be optimized, we create temp array for every merge, it could be created only once at the beginning.  
+Here is a solution I was able to develop. It could be optimized, we create temp array for every merge, it could be created only once at the beginning.
 
 ```
 package sorting;
@@ -74,10 +74,57 @@ public class MergeSort3 {
         }
     }
 }
-
 ```
 
 Here is another implementation.
+
+```
+class MergerSort2 {
+    public static void main(String[] args) {
+        Integer[] a = {2, 6, 3, 5, 1};
+        mergeSort(a);
+        System.out.println(Arrays.toString(a));
+    }
+
+    public static void mergeSort(Comparable[] a) {
+        Comparable[] tmp = new Comparable[a.length];
+        mergeSort(a, tmp, 0, a.length - 1);
+    }
+
+    private static void mergeSort(Comparable[] a, Comparable[] tmp, int left, int right) {
+        if (left < right) {
+            int center = (left + right) / 2;
+            mergeSort(a, tmp, left, center);
+            mergeSort(a, tmp, center + 1, right);
+            merge(a, tmp, left, center + 1, right);
+        }
+    }
+
+    private static void merge(Comparable[] arr, Comparable[] tmp, int left, int right, int rightEnd) {
+        int leftEnd = right - 1;
+        int k = left;
+        int num = rightEnd - left + 1;
+
+        while (left <= leftEnd && right <= rightEnd)
+            if (arr[left].compareTo(arr[right]) <= 0)
+                tmp[k++] = arr[left++];
+            else
+                tmp[k++] = arr[right++];
+
+        while (left <= leftEnd)    // Copy rest of first half
+            tmp[k++] = arr[left++];
+
+        while (right <= rightEnd)  // Copy rest of right half
+            tmp[k++] = arr[right++];
+
+        // Copy tmp back
+        for (int i = 0; i < num; i++, rightEnd--)
+            arr[rightEnd] = tmp[rightEnd];
+    }
+}
+```
+
+Here is another implementation. I have put it here just as a reference, but I don't like it. 
 
 ```
 class MergeSort1 {
@@ -159,54 +206,6 @@ class MergeSort1 {
 
         System.out.println("\nSorted array");
         System.out.println(Arrays.toString(arr));
-    }
-}
-```
-
-Here is another implementation.
-
-```
-class MergerSort2 {
-    public static void main(String[] args) {
-        Integer[] a = {2, 6, 3, 5, 1};
-        mergeSort(a);
-        System.out.println(Arrays.toString(a));
-    }
-
-    public static void mergeSort(Comparable[] a) {
-        Comparable[] tmp = new Comparable[a.length];
-        mergeSort(a, tmp, 0, a.length - 1);
-    }
-
-    private static void mergeSort(Comparable[] a, Comparable[] tmp, int left, int right) {
-        if (left < right) {
-            int center = (left + right) / 2;
-            mergeSort(a, tmp, left, center);
-            mergeSort(a, tmp, center + 1, right);
-            merge(a, tmp, left, center + 1, right);
-        }
-    }
-
-    private static void merge(Comparable[] arr, Comparable[] tmp, int left, int right, int rightEnd) {
-        int leftEnd = right - 1;
-        int k = left;
-        int num = rightEnd - left + 1;
-
-        while (left <= leftEnd && right <= rightEnd)
-            if (arr[left].compareTo(arr[right]) <= 0)
-                tmp[k++] = arr[left++];
-            else
-                tmp[k++] = arr[right++];
-
-        while (left <= leftEnd)    // Copy rest of first half
-            tmp[k++] = arr[left++];
-
-        while (right <= rightEnd)  // Copy rest of right half
-            tmp[k++] = arr[right++];
-
-        // Copy tmp back
-        for (int i = 0; i < num; i++, rightEnd--)
-            arr[rightEnd] = tmp[rightEnd];
     }
 }
 ```
