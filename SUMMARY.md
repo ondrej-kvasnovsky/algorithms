@@ -10,6 +10,7 @@
   * [Prime Number](prime-number.md)
   * [Roman to Integer](roman-to-integer.md)
   * [Happy Number](happy-number.md)
+  * [p^k](pk.md)
 * [Searching](finding.md)
   * [Union-Find Algorithms](union-find-algorithms.md)
   * [Finding Peak](finding-peak.md)

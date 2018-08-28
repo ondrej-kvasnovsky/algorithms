@@ -35,8 +35,6 @@ Each element`nums[i]`will be an integer in the range`[-1000, 1000]`.
 
 ## Solution
 
-
-
 ```
 class Solution {
     public int pivotIndex(int[] nums) {
