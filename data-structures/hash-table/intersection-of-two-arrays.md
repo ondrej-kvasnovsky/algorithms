@@ -16,7 +16,7 @@ return[2].
 * Each element in the result must be unique.
 * The result can be in any order.
 
-Here is a solution that uses sets to get unique elements. 
+Here is a solution that uses sets to get unique elements.
 
 ```
 class Solution {
