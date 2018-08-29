@@ -176,6 +176,8 @@
     * [Word Squares](data-structures/trie/word-squares.md)
     * [Longest Common Prefix](data-structures/array/longest-common-prefix.md)
     * [Palindrome Pairs](data-structures/trie/palindrome-pairs.md)
+  * [Balanced Tree](data-structures/balanced-tree.md)
+  * [Graph](data-structures/graph.md)
 * [Sequences](sequences.md)
   * [Fibonacci Sequence](sequences/fibonacci-sequence.md)
 * [Dynamic Programming](dynamic-programmimg.md)
