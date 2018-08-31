@@ -38,6 +38,7 @@
   * [Longest Common Prefix](longest-common-prefix.md)
 * [Sorting](sorting.md)
   * [Elementary Sorts](elementary-sorts.md)
+  * [Insertion Sort](insertion-sort.md)
   * [Bubble Sort](bubble-sort.md)
   * [Mergesort](merge-sort.md)
   * [Quicksort](quicksort.md)
