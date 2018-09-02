@@ -216,4 +216,8 @@
     * [First Unique Character in a String](first-unique-character-in-a-string.md)
     * [Move Zeroes](move-zeroes.md)
     * [Remove Duplicates from Sorted Array](remove-duplicates-from-sorted-array.md)
+    * [Merge k Sorted Lists](merge-k-sorted-lists.md)
+    * [Insert into a Cyclic Sorted List](insert-into-a-cyclic-sorted-list.md)
+    * [Evaluate Division](evaluate-division.md)
+    * [Inorder Successor in BST](inorder-successor-in-bst.md)
 
