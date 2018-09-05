@@ -2,7 +2,7 @@
 
 ### Selection Sort
 
-O\(1/2\(n^2\)\)
+O\(1/2\(n^2\)\) -&gt; O\(n^2\). It is in-place sort. We find smallest value and move it to the front. It is not stable algorithm.
 
 ```
 class SortArray {
@@ -34,7 +34,7 @@ class SortArray {
 
 ### Insertion Sort
 
-Complexity is about O\(1/4\(n^2\)\) in optimistic case - when the array is partially sorted, this algorithm works perfectly In worst case, it is O\(1/2\(n^2\)\) - when the values in reversed order.
+Complexity is about O\(1/4\(n^2\)\) in optimistic case - when the array is partially sorted, this algorithm works perfectly In worst case, it is O\(1/2\(n^2\)\) - when the values in reversed order. In general, O\(n^2\). It is in-place and stable. For sorted list, the complexity is O\(n\). 
 
 ```
 class InsertionSortArray {
@@ -64,7 +64,7 @@ class InsertionSortArray {
 
 ### Shell Sort
 
-O\(n^\(3/2\).
+O\(n^\(3/2\). Not stable, can be done in-place. 
 
 ```
 class ShellSortArray {
@@ -104,17 +104,14 @@ Knuth shuffle: iterate through the cards and generate random number that is betw
 
 ### Convex Hull
 
-The first approach to calculate a convex hull could be: 
+The first approach to calculate a convex hull could be:
 
 1. Find most left point
 2. Then find most right point to that point and repeat this until we get to the most left point
 
 ```
 
- 
 ```
-
-
 
 ![](/assets/Screen Shot 2017-06-27 at 7.22.23 PM.png)
 

@@ -42,6 +42,8 @@
   * [Bubble Sort](bubble-sort.md)
   * [Mergesort](merge-sort.md)
   * [Quicksort](quicksort.md)
+  * [Radix Sort](radix-sort.md)
+  * [Heap Sort](heap-sort.md)
 * [Data Structures](data-structures.md)
   * [Array & List](data-structures/array.md)
     * [Find Pivot Index](data-structures/array/find-pivot-index.md)

@@ -1,6 +1,6 @@
 # Mergesort
 
-Complexity: O\(n log n\)
+Complexity: O\(n log n\). A [very good explanation](https://www.youtube.com/watch?v=qdv3i6X0PiQ) of merge sort by Rob Edwards. Is stable but can't be done in-place.
 
 ### Basic algorithm
 
