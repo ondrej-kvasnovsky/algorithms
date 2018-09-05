@@ -74,6 +74,7 @@
     * [Count and Say](data-structures/array/count-and-say.md)
     * [Merge Sorted Array](data-structures/array/merge-sorted-array.md)
     * [Shuffle an Array](data-structures/array/shuffle-an-array.md)
+    * [Max Area of Island](data-structures/array/max-area-of-island.md)
   * [Matrix](data-structures/matrix.md)
   * [Stack](data-structures/stack.md)
     * [Valid Parentheses](data-structures/stack/valid-parentheses.md)
