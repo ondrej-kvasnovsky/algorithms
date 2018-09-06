@@ -6,7 +6,7 @@ Is O\(n log n\) complexity. Is not stable but can be done in-place. In worst cas
 
 ## Solution
 
-Here is an implementation, similar to the one from the video. 
+Here is an implementation, similar to the one from the video.
 
 ```
 package sorting;
@@ -47,7 +47,6 @@ public class QuickSortRobEdwards {
         array[to] = temp;
     }
 }
-
 ```
 
 

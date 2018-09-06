@@ -16,7 +16,7 @@ Output:  [1,2,4,7,5,3,6,8,9]
 
 ## Solution
 
-Here is a non-optimized solution \(from code readability point of view\). 
+Here is a non-optimized solution \(from code readability point of view\).
 
 ```
 class Solution {
@@ -68,7 +68,7 @@ class Solution {
 }
 ```
 
-When we simplify the algorighm we can get into something like this. Boolean goingUp variable is replaced by % 2 because if the modulo of a number is 0, we are going up. 
+When we simplify the algorighm we can get into something like this. Boolean goingUp variable is replaced by % 2 because if the modulo of a number is 0, we are going up.
 
 | row | column | direction |
 | :--- | :--- | :--- |
@@ -77,7 +77,7 @@ When we simplify the algorighm we can get into something like this. Boolean goin
 | 0 | 2 | up |
 | 2 | 1 | down |
 
-Then we can simplify the code. 
+Then we can simplify the code \(to make it less readable\).
 
 ```
     public int[] findDiagonalOrder(int[][] matrix) {
