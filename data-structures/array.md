@@ -117,5 +117,86 @@ John 9
 John 10
 ```
 
+Here is another example with `add`, `get` and `remove` functions.
+
+```
+package datastructures;
+
+class ArrayListTest {
+    public static void main(String[] a) {
+        ArrayList<Integer> list = new ArrayList<>();
+
+        System.out.println(list);
+
+        list.add(1);
+        System.out.println(list);
+
+        list.add(2);
+        System.out.println(list);
+
+        list.add(3);
+        System.out.println(list);
+
+        System.out.println(list.get(0));
+
+        list.remove(1);
+        System.out.println(list);
+    }
+}
+
+public class ArrayList<E> {
+    private E[] values;
+    private int initialSize = 10;
+    private int count;
+
+    public ArrayList() {
+        values = (E[]) new Object[initialSize];
+    }
+
+    public void add(E value) {
+        if (count >= values.length) {
+            resize();
+        }
+        values[count++] = value;
+    }
+
+    public void resize() {
+        initialSize *= 2;
+        E[] t = (E[]) new Object[initialSize];
+        System.arraycopy(values, 0, t, 0, values.length);
+        values = t;
+    }
+
+    public E get(int index) {
+        if (index < 0 || index >= count) throw new IndexOutOfBoundsException();
+        return values[index];
+    }
+
+    public void remove(int index) {
+        if (index < 0 || index >= count) throw new IndexOutOfBoundsException();
+        values[index] = null;
+        if (index < count - 1) {
+            System.arraycopy(values, index + 1, values, index, count);
+        }
+        count--;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        for (int i = 0; i < count; i++) {
+            sb.append(values[i]);
+            if (i != count - 1) {
+                sb.append(",");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
+    }
+}
+
+```
+
 
 

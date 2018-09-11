@@ -4,33 +4,33 @@ Hash set offers a data structure that offers complexity of `O(1)` to insert and 
 
 > If you are interesting in sets, have a look at this [chapter in Java Handbook](https://ondrej-kvasnovsky.gitbooks.io/java-handbook/content/chapter1.html).
 
-Here is a naive implementation of hash set. 
+Here is a naive implementation of hash set.
 
 ```
 class MyHashSet {
-    
+
     private Integer[] values = new Integer[1000000];
-    
+
     public void add(int key) {
         values[hash(key)] = key;
     }
-    
+
     public void remove(int key) {
         values[hash(key)] = null;
     }
-    
+
     /** Returns true if this set did not already contain the specified element */
     public boolean contains(int key) {
         return values[hash(key)] != null;
     }
-    
+
     public int hash(int value) {
-        return value % values.length;
+        return values.length % value;
     }
 }
 ```
 
-We can perform the following with the hash set we have created. 
+We can perform the following with the hash set we have created.
 
 ```
 MyHashSet hashSet = new MyHashSet();
@@ -44,7 +44,7 @@ hashSet.remove(2);
 hashSet.contains(2);    // returns false (already removed)
 ```
 
-## Advanced hashing and re-sizing hash set. 
+## Advanced hashing and re-sizing hash set.
 
 Lets create simple hash set to demonstrate how they are implemented. We can put couple of items into this hash set. If we would like to expand values array when more elements come, we would have to add more check and resizing. But this is omitted from this implementation for easier understanding.
 
@@ -128,6 +128,143 @@ Observe how are the values placed in the array.
 [null, null, null, null, Hello, null, null, null, null, null, null, null, null, null, null, null]
 [null, null, 123, null, Hello, null, null, null, null, null, null, null, null, null, null, null]
 [null, null, 123, null, Hello, 1234, null, null, null, null, null, null, null, null, null, null]
+```
+
+## Linked List to handle equals values but the same positions 
+
+```
+import java.util.Arrays;
+
+class NaiveSetTest {
+    public static void main(String[] args) {
+        NaiveSet<Integer> set = new NaiveSet();
+        set.add(1);
+        set.add(1);
+        set.add(2);
+        set.add(3);
+        set.add(4);
+        set.add(5);
+        set.add(6);
+        set.add(7);
+        set.add(8);
+        System.out.println(set);
+
+        set.remove(1);
+        System.out.println(set);
+
+        set.remove(5);
+        System.out.println(set);
+
+        set.remove(7);
+        System.out.println(set);
+    }
+}
+
+public class NaiveSet<E> {
+    Entry<E>[] entries;
+    int size = 10;
+
+    NaiveSet() {
+        entries = new Entry[size];
+    }
+
+    public void add(E value) {
+        int position = calcPosition(value);
+        if (entries[position] != null) {
+            addIntoLinkedList(entries[position], value);
+        } else {
+            entries[position] = new Entry<>(value);
+        }
+    }
+
+    private void addIntoLinkedList(Entry<E> entry, E value) {
+        Entry<E> current = entry;
+        while (current.next != null) {
+            if (current.value.equals(value)) {
+                return;
+            }
+            current = current.next;
+        }
+        if (!current.value.equals(value)) {
+            current.next = new Entry<>(value);
+        }
+    }
+
+    private int calcPosition(E value) {
+        int hashCode = value.hashCode();
+        if (hashCode == 0) {
+            return 0;
+        }
+        return entries.length % hashCode;
+    }
+
+    public void remove(E value) {
+        int position = calcPosition(value);
+        if (entries[position] != null) {
+            removeFromLinkedList(entries[position], value);
+        } else {
+            entries[position] = null;
+        }
+    }
+
+    private void removeFromLinkedList(Entry<E> entry, E value) {
+        Entry<E> previous = entry;
+        Entry<E> current = entry.next;
+        if (previous != null && current == null) {
+            if (previous.value.equals(value)) {
+                int position = calcPosition(value);
+                entries[position] = null;
+                return;
+            }
+        }
+        if (previous.value.equals(value)) {
+            int position = calcPosition(value);
+            entries[position] = current;
+            return;
+        }
+        while (current != null) {
+            if (current.value.equals(value)) {
+                previous.next = current.next;
+            }
+            previous = current;
+            current = current.next;
+        }
+    }
+
+    public String toString() {
+        return Arrays.toString(entries);
+    }
+}
+
+class Entry<E> {
+    E value;
+    Entry<E> next;
+
+    Entry(E value) {
+        this.value = value;
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        Entry<E> current = this;
+        while (current != null) {
+            sb.append(" -> ");
+            sb.append(current.value);
+            current = current.next;
+        }
+        return sb.toString();
+    }
+}
+
+```
+
+Here is the output. 
+
+```
+[ -> 1 -> 2 -> 5,  -> 3,  -> 4 -> 8,  -> 7,  -> 6, null, null, null, null, null]
+[ -> 2 -> 5,  -> 3,  -> 4 -> 8,  -> 7,  -> 6, null, null, null, null, null]
+[ -> 2,  -> 3,  -> 4 -> 8,  -> 7,  -> 6, null, null, null, null, null]
+[ -> 2,  -> 3,  -> 4 -> 8, null,  -> 6, null, null, null, null, null]
 ```
 
 

@@ -2,22 +2,22 @@
 
 Map stores values behind keys. That said, values in a map can be obtained using a key.
 
-Lets create very simple hash map. This hash map is fixed size and does not count other types than integer. 
+Lets create very simple hash map. This hash map is fixed size and does not count other types than integer.
 
 ```
 class MyHashMap {
-    
+
     Integer[] values = new Integer[1000000];
-   
+
     /** Initialize your data structure here. */
     public MyHashMap() {
     }
-    
+
     /** value will always be positive. */
     public void put(int key, int value) {
         values[hash(key)] = value;
     }
-    
+
     /** Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key */
     public int get(int key) {
         Integer result = values[hash(key)];
@@ -26,19 +26,24 @@ class MyHashMap {
         }
         return result;
     }
-    
+
     /** Removes the mapping of the specified value key if this map contains a mapping for the key */
     public void remove(int key) {
         values[hash(key)] = null;
     }
-    
+
     private int hash(int value) {
-        return value % values.length;
+        return values.length % value;
+        // or we can use bit operator to limit number to upper boundary, which is length of array
+        // return hashCode & (entries.length - 1);
+        // hashCode: 10 , n: 9
+        // hashCode (in binary): 1010 , n (in binary): 1001
+        // position (in binary): 1000 (8 in decimal)
     }
 }
 ```
 
-Now we can use the hash map as follows. 
+Now we can use the hash map as follows.
 
 ```
 MyHashMap hashMap = new MyHashMap();
@@ -49,12 +54,12 @@ hashMap.get(3);            // returns -1 (not found)
 hashMap.put(2, 1);          // update the existing value
 hashMap.get(2);            // returns 1 
 hashMap.remove(2);          // remove the mapping for 2
-hashMap.get(2);            // returns -1 (not found) 
+hashMap.get(2);            // returns -1 (not found)
 ```
 
 ## Implementation using Entry
 
-We need to use Entry class to handle duplicates \(when two objects have the same hash code but they are not equal\). 
+We need to use Entry class to handle duplicates \(when two objects have the same hash code but they are not equal\).
 
 ```
 class HashMap<K, V> {
