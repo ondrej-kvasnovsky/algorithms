@@ -6,6 +6,58 @@ Linked list is probably going to take more memory than array implementation. But
 
 When using array approach, we should expand an array when the array is 25% or something like that, full. That will prevent often shrinking and expanding of an array.
 
+Here is an implementation of basic stack in Java language. 
+
+```
+package datastructures;
+
+public class StackTest {
+    public static void main(String[] args) {
+        MyStack stack = new MyStack();
+        stack.push(1);
+        stack.push(2);
+        System.out.println(stack.poll()); // 2
+        stack.push(3);
+        System.out.println(stack.poll()); // 3
+        System.out.println(stack.poll()); // 1
+    }
+}
+
+class MyStack {
+    MyStackNode head;
+
+    void push(int i) {
+        MyStackNode n = new MyStackNode(i);
+        if (head == null) {
+            head = n;
+        } else {
+            n.next = head;
+            head = n;
+        }
+    }
+
+    int poll() {
+        if (head == null) return -1;
+        else {
+            int val = head.val;
+            head = head.next;
+            return val;
+        }
+    }
+}
+
+class MyStackNode {
+    int val;
+    MyStackNode next;
+
+    public MyStackNode(int val) {
+        this.val = val;
+    }
+}
+```
+
+Here is a naive implementation of stack from an array of elements.
+
 ```
 class Stack<T>(vararg items: T) {
     private val values = items.toMutableList()
