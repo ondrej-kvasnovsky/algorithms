@@ -2,7 +2,7 @@
 
 [Here](https://www.youtube.com/watch?v=ZHVk2blR45Q) is a very good explanation of quick sort by Rob Edwards from SDSU.
 
-Is O\(n log n\) complexity. Is not stable but can be done in-place. In worst case, it is O\(n^2\).
+Is `O(n log n)` complexity. Is not stable but can be done in-place. In worst case, it is `O(n^2)`.
 
 ## Solution
 
@@ -29,16 +29,16 @@ public class QuickSortRobEdwards {
         if (from >= to) return; // single element list is already sorted
 
         int pivotPointValue = array[to];
-        int firstNumberThatIsLargeThanPivotPoint = from;
+        int firsIndexThatIsLargeThanPivotPoint = from;
         for (int i = from; i < to; i++) {
             if (array[i] < pivotPointValue) {
-                swap(array, i, firstNumberThatIsLargeThanPivotPoint);
-                firstNumberThatIsLargeThanPivotPoint++;
+                swap(array, i, firsIndexThatIsLargeThanPivotPoint);
+                firsIndexThatIsLargeThanPivotPoint++;
             }
         }
-        swap(array, firstNumberThatIsLargeThanPivotPoint, to);
-        quicksort(array, from, firstNumberThatIsLargeThanPivotPoint - 1);
-        quicksort(array, firstNumberThatIsLargeThanPivotPoint + 1, to);
+        swap(array, firsIndexThatIsLargeThanPivotPoint, to);
+        quicksort(array, from, firsIndexThatIsLargeThanPivotPoint - 1);
+        quicksort(array, firsIndexThatIsLargeThanPivotPoint + 1, to);
     }
 
     public static void swap(int[] array, int from, int to) {
