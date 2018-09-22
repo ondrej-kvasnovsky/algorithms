@@ -33,7 +33,7 @@ Explanation: The input is: [5,1,4,null,null,3,6]. The root node's value
 
 ## Solution
 
-Value on right must be smaller than its parent value. And value on right must be higher than its parent value. So we can make an algorithm that will check whether a value of left node is in range from min value to max value \(value of parent\). At the same time, a value on right must be higher than root value and less than max value. 
+Value on right must be smaller than its parent value. And value on right must be higher than its parent value. So we can make an algorithm that will check whether a value of left node is in range from min value to max value \(value of parent\). At the same time, a value on right must be higher than root value and less than max value.
 
 ```
 public class Solution {
