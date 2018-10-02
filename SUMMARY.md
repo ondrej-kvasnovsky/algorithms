@@ -185,6 +185,7 @@
     * [Red-black Tree](data-structures/balanced-tree/red-black-tree.md)
     * [AVL Tree](data-structures/balanced-tree/avl-tree.md)
   * [Graph](data-structures/graph.md)
+    * [A\* Search](data-structures/graph/a-search.md)
 * [Sequences](sequences.md)
   * [Fibonacci Sequence](sequences/fibonacci-sequence.md)
 * [Dynamic Programming](dynamic-programmimg.md)
