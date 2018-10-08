@@ -2,7 +2,7 @@
 
 A\* Search algorithm is extension of Dijkstra algorithm to find shortest path between two points in a graph using heuristics to guid the search \(heuristic is distance from start to the current point and distance from current point to the last one\).
 
-Nice [explanation of A\* search algorithm](https://www.youtube.com/watch?v=aKYlikFAV4k) with visualization. Here is the code that does not do any visuals but is just implements what was done in that video in JavaScript. It is naive implementation, not using priority queue. 
+Nice [explanation of A\* search algorithm](https://www.youtube.com/watch?v=aKYlikFAV4k) with visualization. Here is the code that does not do any visuals but is just implements what was done in that video in JavaScript. It is naive implementation, not using priority queue.
 
 ```
 class Grid {
@@ -380,7 +380,6 @@ const path = grid.find(0, 0, 0, 4);
 
 for (const p of path)
   console.log(p.i, p.j);
-
 ```
 
 
