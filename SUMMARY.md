@@ -263,4 +263,6 @@
     * [Range Sum Query 2D - Mutable](range-sum-query-2d-mutable.md)
     * [UTF-8 Validation](utf-8-validation.md)
     * [Maximum Product of Word Lengths](maximum-product-of-word-lengths.md)
+* [Other](other.md)
+  * [Game of Life](other/game-of-life.md)
 
