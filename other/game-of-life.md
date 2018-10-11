@@ -1,6 +1,6 @@
 # Game of Life
 
-\[Game of Life\]\([https://en.wikipedia.org/wiki/Conway's\_Game\_of\_Life](https://en.wikipedia.org/wiki/Conway's_Game_of_Life)\) is a system where cells can die, live or become alive based on surrounding cells.
+[Game of Life](https://en.wikipedia.org/wiki/Conway's_Game_of_Life]%28https://en.wikipedia.org/wiki/Conway's_Game_of_Life) is a system where cells can die, live or become alive based on surrounding cells.
 
 ![](/assets/Screen Shot 2018-10-08 at 9.51.23 PM.png)
 
